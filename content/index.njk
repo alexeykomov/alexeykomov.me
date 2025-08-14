@@ -4,20 +4,50 @@ const eleventyNavigation = {
 	order: 1
 };
 
-const numberOfLatestPostsToShow = 3;
 ---
-{% set postsCount = collections.posts | length %}
-{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
-{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
-{% set postslistCounter = postsCount %}
-{% include "postslist.njk" %}
+<h1>Alexey Komov</h1>
 
-{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-{% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
-{% endif %}
+<picture>
+<source type="image/webp" srcset="/img/avatar1x.webp 1x, /img/avatar1.5x.webp 1.5x, /img/avatar2x.webp 2x, /img/avatar3x.webp 3x">
+<source type="image/jp2" srcset="/img/avatar1x.jp2 1x, /img/avatar1.5x.jp2 1.5x, /img/avatar2x.jp2 2x, /img/avatar3x.jp2 3x">
+<source type="image/jpeg" srcset="/img/avatar1x.jpg 1x, /img/avatar1.5x.jpg 1.5x, /img/avatar2x.jpg 2x, /img/avatar3x.jpg 3x">
+<img src="/img/avatar1x.jpg" alt="Alexey avatar" class="avatar" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem;">
+</picture>
+
+<p>Hello, my name is Alexey, I'm a front-end developer, currently working for <a href="https://www.epam.com">EPAM</a>.</p>
+
+<p>I'm also the author of <a href="https://reflectcal.com">Reflect Calendar</a>, a fast and minimalist web-calendar.</p>
+
+<p>My passions include:</p>
+<ol>
+<li>Web.</li>
+<li>Large web-applications, yet with simple UI.</li>
+<li>Performance.</li>
+<li>Simplicity.</li>
+<li>Challenging problems on the edge of what is possible in Web platform.</li>
+</ol>
+
+<p>Personal interests include, among other, traveling, books and music.</p>
+
+<p>Here's my <a href="https://github.com/alexeykomov/">GitHub profile</a>.</p>
+
+<p>I occasionally blog here at <a href="https://medium.com/reflecting-on-bits">Medium</a>.</p>
+
+<p>My resume is <a href="https://alexeykomov.github.io/resume/resume">here</a> (and in <a href="https://alexeykomov.github.io/resume/resume.pdf">pdf</a>, <a href="https://alexeykomov.github.io/resume/resume.txt">txt</a>).</p>
+
+<p>Feel free to contact me by <a href="#" id="mail-link-home">e-mail</a>.</p>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('mail-link-home').href = ['mailto:',
+            'alexeykcontact', '@', 'gmail', '.', 'com'].join('');
+});
+</script>
+
+<h2>Projects</h2>
+
+<p>Check out my <a href="/projects/">projects</a> to see what I've been working on.</p>
 
 {# List every content page in the project #}
 {#
