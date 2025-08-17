@@ -6,16 +6,20 @@ const eleventyNavigation = {
 ---
 # About
 
+<div style="max-width: 680px; margin: 0 auto;">
 <picture>
 <source type="image/webp" srcset="/img/avatar1x.webp 1x, /img/avatar1.5x.webp 1.5x, /img/avatar2x.webp 2x, /img/avatar3x.webp 3x">
 <source type="image/jp2" srcset="/img/avatar1x.jp2 1x, /img/avatar1.5x.jp2 1.5x, /img/avatar2x.jp2 2x, /img/avatar3x.jp2 3x">
 <source type="image/jpeg" srcset="/img/avatar1x.jpg 1x, /img/avatar1.5x.jpg 1.5x, /img/avatar2x.jpg 2x, /img/avatar3x.jpg 3x">
-<img src="/img/avatar1x.jpg" alt="Alexey avatar" class="avatar" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem;">
+<img src="/img/avatar1x.jpg" alt="Alexey avatar" class="avatar" style="width: 300px; height: 300px; border-radius: 50%; margin-bottom: 1rem;">
 </picture>
+</div>
 
-Hello, my name is Alexey, I'm a front-end developer, currently working for [EPAM](https://www.epam.com).
+Hello, my name is Alexey, I'm a front-end/fullstack engineer with interest towards <a href="https://radzima.app/">iOS native development</a>.
 
 I'm also the author of [Reflect Calendar](https://reflectcal.com), a fast and minimalist web-calendar.
+
+I'd love to collaborate on scientific open source project (web or mobile).
 
 My passions include:
 
@@ -27,11 +31,7 @@ My passions include:
 
 Personal interests include, among other, traveling, books and music.
 
-Here's my [GitHub profile](https://github.com/alexeykomov/).
-
-I occasionally blog here at [Medium](https://medium.com/reflecting-on-bits).
-
-Here's my [resume](https://alexeykomov.github.io/resume/resume.pdf).
+Here's my [GitHub profile](https://github.com/alexeykomov/) and [resume](https://alexeykomov.github.io/resume/resume.pdf).
 
 Feel free to contact me by <a href="#" id="mail-link-about">e-mail</a>.
 
