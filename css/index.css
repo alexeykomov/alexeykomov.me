@@ -357,3 +357,10 @@ math {
 	font-size: 5em;
 }
 
+/* Override Prism.js pre block styling and plain pre blocks */
+main pre[class*="language-"],
+main pre:not([class*="language-"]) {
+	max-width: 680px;
+	margin: 2rem auto;
+}
+
