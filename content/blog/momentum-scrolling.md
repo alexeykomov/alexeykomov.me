@@ -1,7 +1,7 @@
 ---
 title: Physics of Momentum Scrolling
 description: Exploring the technical challenges and solutions for implementing custom scrolling behavior in web browsers, particularly addressing iOS Safari's scrolling issues.
-date: 2018-06-01
+date: 2016-06-02
 tags: scrolling, iOS, Safari, web development, physics
 ---
 
@@ -12,9 +12,12 @@ When developing one of my projects — [Reflect calendar](https://reflectcal.com
 This problem also manifests itself when you're dragging the whole screen by some element outside of scrollable area, and then trying to scroll inside that area. You should wait until the whole screen "settles down" and approximately one more second to do that. Looks like this problem has a name — "overscroll".
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/videos/ios-safari-scrolling.webm" type="video/webm">
-  <source src="/videos/ios-safari-scrolling.mp4" type="video/mp4">
-  <img src="https://miro.medium.com/v2/resize:fit:540/format:webp/1*cQqmLnDFVyRN0JwbKpQQYQ.gif" alt="iOS Safari scrolling issue demonstration" style="width:100%; max-width:270px;">
+  <source src="/blog/momentum-scrolling/ios-safari-scrolling.webm" type="video/webm">
+  <source src="/blog/momentum-scrolling/ios-safari-scrolling.mp4" type="video/mp4">
+  <picture style="width:100%; max-width:270px;">
+    <source srcset="/blog/momentum-scrolling/0BeGvm-juB-270.webp" type="image/webp">
+    <img src="/blog/momentum-scrolling/0BeGvm-juB-270.gif" alt="iOS Safari scrolling issue demonstration" style="width:100%; max-width:270px;">
+  </picture>
 </video>
 
 Now, is it really worth a concern doing something about it? After all, native is native and we won't get any better option, right?
@@ -30,9 +33,12 @@ We're discovering immediately that Ryan's solution is based on transitions — t
 First, let's show what momentum scrolling will look in the end.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/videos/momentum-scrolling-result.webm" type="video/webm">
-  <source src="/videos/momentum-scrolling-result.mp4" type="video/mp4">
-  <img src="https://miro.medium.com/v2/resize:fit:540/format:webp/1*PG1jOvS3KnQhpS_bxDGt2A.gif" alt="Momentum scrolling implementation result" style="width:100%; max-width:270px;">
+  <source src="/blog/momentum-scrolling/momentum-scrolling-result.webm" type="video/webm">
+  <source src="/blog/momentum-scrolling/momentum-scrolling-result.mp4" type="video/mp4">
+  <picture style="width:100%; max-width:270px;">
+    <source srcset="/blog/momentum-scrolling/bNFA7l4R84-270.webp" type="image/webp">
+    <img src="/blog/momentum-scrolling/bNFA7l4R84-270.gif" alt="Momentum scrolling implementation result" style="width:100%; max-width:270px;">
+  </picture>
 </video>
 
 Ryan's article describes basis DOM setup, drag'n'drop part via touch events and translate3d transform property. This should be fairly intuitive. Now, the heart of logic is this method — doing momentum whenever user releases touch with some velocity prior to that.
@@ -45,7 +51,7 @@ Let's take a moment and reconsider this more carefully.
 
 First, some theory and formulae for accelerated movement:
 
-<figure>
+<figure id="fig1">
   <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
       <mi>v</mi>
       <mo>=</mo>
@@ -63,22 +69,90 @@ First, some theory and formulae for accelerated movement:
   <figcaption>Fig 1. Velocity</figcaption>
 </figure>
 
-<figure>
-  <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*3lo-InaOjkgAwatiq-mONw.png" alt="Displacement formula" style="width:100%">
+<figure id="fig2">
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mi>x</mi>
+      <mo>=</mo>
+      <msub>
+          <mi>x</mi>
+          <mn>0</mn>
+      </msub>
+      <mo>+</mo>
+      <msub>
+          <mi>v</mi>
+          <mn>0</mn>
+      </msub>
+      <mi>t</mi>
+      <mo>+</mo>
+      <mfrac>
+          <mrow>
+              <mi>a</mi>
+              <msup>
+                  <mi>t</mi>
+                  <mn>2</mn>
+              </msup>
+          </mrow>
+          <mn>2</mn>
+      </mfrac>
+  </math>
+  <noscript>
+    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*3lo-InaOjkgAwatiq-mONw.png" alt="Displacement formula" style="width:100%">
+  </noscript>
   <figcaption>Fig 2. Displacement</figcaption>
 </figure>
 
-<figure>
-  <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*sPUX1kKNiaSQz9GGcE2wSQ.png" alt="Time formula" style="width:100%">
+<figure id="fig3">
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mi>t</mi>
+      <mo>=</mo>
+      <mfrac>
+          <mrow>
+              <mi>v</mi>
+              <mo>-</mo>
+              <msub>
+                  <mi>v</mi>
+                  <mn>0</mn>
+              </msub>
+          </mrow>
+          <mi>a</mi>
+      </mfrac>
+  </math>
+  <noscript>
+    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*sPUX1kKNiaSQz9GGcE2wSQ.png" alt="Time formula" style="width:100%">
+  </noscript>
   <figcaption>Fig 3. Time</figcaption>
 </figure>
 
-<figure>
-  <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*1mb37V5aKbp7-OtcaNmrXQ.png" alt="Displacement formula" style="width:100%">
+<figure id="fig4">
+  <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+      <mi mathvariant="normal">Δ</mi>
+      <mi>x</mi>
+      <mo>=</mo>
+      <mfrac>
+          <mrow>
+              <msup>
+                  <mi>v</mi>
+                  <mn>2</mn>
+              </msup>
+              <mo>-</mo>
+              <msubsup>
+                  <mi>v</mi>
+                  <mn>0</mn>
+              </msubsup>
+          </mrow>
+          <mrow>
+              <mn>2</mn>
+              <mi>a</mi>
+          </mrow>
+      </mfrac>
+  </math>
+  <noscript>
+    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*1mb37V5aKbp7-OtcaNmrXQ.png" alt="Displacement formula" style="width:100%">
+  </noscript>
   <figcaption>Fig4. Displacement</figcaption>
 </figure>
 
-Last formula (Fig. 4) is derived from formula on Fig. 2 by moving x minus x0 to the left and replacing time by expression in Fig. 3. So we're using these formulae to get displacement and time in the doMomentum function, nothing particularly special.
+Last formula (<a href="#fig4">Fig. 4</a>) is derived from formula on <a href="#fig2">Fig. 2</a> by moving x minus x0 to the left and replacing time by expression in <a href="#fig3">Fig. 3</a>. So we're using these formulae to get displacement and time in the doMomentum function, nothing particularly special.
 
 Now that we know how far and how long our movement will take, it's time to apply proper transition to this movement. Fortunately, Ryan gives us one — cubic bezier for slow deceleration ending in full stop (velocity is zero).
 
@@ -87,9 +161,12 @@ So now we have basic implementation of how content will behave should it deceler
 Also, quite simple is the returning content from out of bounds position to frame. Here's how it looks.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/videos/returning-content.webm" type="video/webm">
-  <source src="/videos/returning-content.mp4" type="video/mp4">
-  <img src="https://miro.medium.com/v2/resize:fit:540/format:webp/1*eYS2F9_GMHWH7Yao4kr4Pg.gif" alt="Returning content from out of bounds position" style="width:100%; max-width:270px;">
+  <source src="/blog/momentum-scrolling/returning-content.webm" type="video/webm">
+  <source src="/blog/momentum-scrolling/returning-content.mp4" type="video/mp4">
+  <picture style="width:100%; max-width:270px;">
+    <source srcset="/blog/momentum-scrolling/ncTGSXtJmr-270.webp" type="image/webp">
+    <img src="/blog/momentum-scrolling/ncTGSXtJmr-270.gif" alt="Returning content from out of bounds position" style="width:100%; max-width:270px;">
+  </picture>
 </video>
 
 Implementation of this method is here.
@@ -107,9 +184,12 @@ Now the most complex case is left — when deceleration takes content out of bou
 To better illustrate this, here's visualization.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/videos/three-stage-transition.webm" type="video/webm">
-  <source src="/videos/three-stage-transition.mp4" type="video/mp4">
-  <img src="https://miro.medium.com/v2/resize:fit:540/format:webp/1*MrsLEa86DbUcE7jYAOc_pw.gif" alt="Three-stage transition visualization" style="width:100%; max-width:270px;">
+  <source src="/blog/momentum-scrolling/three-stage-transition.webm" type="video/webm">
+  <source src="/blog/momentum-scrolling/three-stage-transition.mp4" type="video/mp4">
+  <picture style="width:100%; max-width:270px;">
+    <source srcset="/blog/momentum-scrolling/t8OoUDI5tr-270.webp" type="image/webp">
+    <img src="/blog/momentum-scrolling/t8OoUDI5tr-270.gif" alt="Three-stage transition visualization" style="width:100%; max-width:270px;">
+  </picture>
 </video>
 
 Actually, part 2 is simple deceleration to zero velocity, which we've already implemented.
@@ -122,9 +202,18 @@ Turns out, the look of function will be different for each end velocity. Let us 
 
 <figure>
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 1rem 0;">
-    <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*veDWBM_Qd1iW-diPjoH7wg.png" alt="Bezier function with zero end velocity" style="flex: 1; min-width: 200px; max-width: 600px;">
-    <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*deYf-34nZ5FlqVEvqSuxNw.png" alt="Bezier function with non-zero end velocity" style="flex: 1; min-width: 200px; max-width: 600px;">
-    <img src="https://miro.medium.com/v2/resize:fit:600/format:webp/1*hWo1JLT-TAdMSLjZDCz2iA.png" alt="Bezier function with same start and end velocity" style="flex: 1; min-width: 200px; max-width: 600px;">
+    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
+      <source srcset="/blog/momentum-scrolling/NYKY-_ffbA-300.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/NYKY-_ffbA-300.jpg" alt="Bezier function with zero end velocity" loading="lazy" decoding="async" width="300" height="600">
+    </picture>
+    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
+      <source srcset="/blog/momentum-scrolling/C4a8Qig9ne-300.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/C4a8Qig9ne-300.jpg" alt="Bezier function with non-zero end velocity" loading="lazy" decoding="async" width="300" height="600">
+    </picture>
+    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
+      <source srcset="/blog/momentum-scrolling/bs22Kv3DAk-300.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/bs22Kv3DAk-300.jpg" alt="Bezier function with same start and end velocity" loading="lazy" decoding="async" width="300" height="600">
+    </picture>
   </div>
   <figcaption>Different bezier deceleration functions.</figcaption>
 </figure>
@@ -135,6 +224,6 @@ Turns out, the look of function will be different for each end velocity. Let us 
 
 So you see relation here — the less end velocity will differ from start velocity, the more flat cubic bezier function will be, up to the limit of simple line (cubic-bezier(.33,.33,.66,.66) or linear). The maximal difference between start and end velocity is when end velocity is zero. In this case function will be cubic-bezier(0.33, 0.66, 0.66, 1). And in any case in between, the function will look like cubic-bezier(0.33, 0.66-x, 0.66, 1-x) where x = abs(endVelocity/startVelocity).
 
-So we're finally here! The demo of working implementation could be seen http://alexeykomov.me/momentum-scroller-demo.
+So we're finally here! The demo of working implementation could be seen [http://alexeykomov.me/momentum-scroller-demo](http://alexeykomov.me/momentum-scroller-demo).
 
 Thanks you for attention.

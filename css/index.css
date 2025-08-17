@@ -57,7 +57,7 @@ html {
 	overflow-y: scroll;
 }
 body {
-	max-width: 44.5em;
+	max-width: 60em;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -87,6 +87,8 @@ video,
 iframe {
 	width: 100%;
 	height: auto;
+	display: block;
+	margin: 0 auto;
 }
 iframe {
 	aspect-ratio: 16/9;
@@ -324,5 +326,34 @@ main p a[href]:visited,
 .post-tag:visited {
 	background-color: #8a2be2;
 	color: white;
+}
+
+main p,
+main script,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6,
+main ul,
+main ol,
+main .gist,
+ul.post-metadata {
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+figcaption {
+	text-align: center;
+}
+
+figure {
+	margin-bottom: 2rem;
+}
+
+math {
+	font-size: 5em;
 }
 
