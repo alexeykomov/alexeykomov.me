@@ -364,3 +364,7 @@ main pre:not([class*="language-"]) {
 	margin: 2rem auto;
 }
 
+figure {
+	text-align: center;
+}
+
