@@ -29,11 +29,23 @@ My passions include:
 4. Simplicity.
 5. Challenging problems on the edge of what is possible in Web platform.
 
+## Stack
+
+Currently working with:
+
+**Languages:** JavaScript, TypeScript, HTML/CSS
+**Frontend:** React, React Native, Redux
+**Backend:** Node.js, Google Cloud
+**Mobile:** Cross-platform development with React Native
+**Tools:** GitHub, Closure Library, Closure Compiler
+
+I have experience building large-scale web applications and mobile apps, with a focus on performance optimization and clean architecture.
+
 Personal interests include, among other, traveling, books and music.
 
 Here's my [GitHub profile](https://github.com/alexeykomov/) and [resume](https://alexeykomov.github.io/resume/resume.pdf).
 
-Feel free to contact me by <a href="#" id="mail-link-about">e-mail</a>.
+Open to consulting work → <a href="#" id="mail-link-about">e-mail</a>.
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {

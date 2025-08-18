@@ -64,7 +64,12 @@ First, some theory and formulae for accelerated movement:
       <mi>t</mi>
   </math>
   <noscript>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*3ZYRa-ZdSHX1zJpBqOiLbg.png" alt="Velocity formula" style="width:100%">
+    <picture>
+      <source type="image/webp" srcset="/img/fig11x.webp 1x, /img/fig11_5x.webp 1.5x, /img/fig12x.webp 2x, /img/fig13x.webp 3x">
+      <source type="image/jp2" srcset="/img/fig11x.jp2 1x, /img/fig11_5x.jp2 1.5x, /img/fig12x.jp2 2x, /img/fig13x.jp2 3x">
+      <source type="image/jpeg" srcset="/img/fig11x.jpg 1x, /img/fig11_5x.jpg 1.5x, /img/fig12x.jpg 2x, /img/fig13x.jpg 3x">
+      <img src="/img/fig11x.png" alt="v = v₀ + at" style="width:100%; max-width:300px;">
+    </picture>
   </noscript>
   <figcaption>Fig 1. Velocity</figcaption>
 </figure>
@@ -96,7 +101,12 @@ First, some theory and formulae for accelerated movement:
       </mfrac>
   </math>
   <noscript>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*3lo-InaOjkgAwatiq-mONw.png" alt="Displacement formula" style="width:100%">
+    <picture>
+      <source type="image/webp" srcset="/img/fig21x.webp 1x, /img/fig21_5x.webp 1.5x, /img/fig22x.webp 2x, /img/fig23x.webp 3x">
+      <source type="image/jp2" srcset="/img/fig21x.jp2 1x, /img/fig21_5x.jp2 1.5x, /img/fig22x.jp2 2x, /img/fig23x.jp2 3x">
+      <source type="image/jpeg" srcset="/img/fig21x.jpg 1x, /img/fig21_5x.jpg 1.5x, /img/fig22x.jpg 2x, /img/fig23x.jpg 3x">
+      <img src="/img/fig21x.png" alt="x = x₀ + v₀t + at²/2" style="width:100%; max-width:300px;">
+    </picture>
   </noscript>
   <figcaption>Fig 2. Displacement</figcaption>
 </figure>
@@ -118,7 +128,12 @@ First, some theory and formulae for accelerated movement:
       </mfrac>
   </math>
   <noscript>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*sPUX1kKNiaSQz9GGcE2wSQ.png" alt="Time formula" style="width:100%">
+    <picture>
+      <source type="image/webp" srcset="/img/fig31x.webp 1x, /img/fig31_5x.webp 1.5x, /img/fig32x.webp 2x, /img/fig33x.webp 3x">
+      <source type="image/jp2" srcset="/img/fig31x.jp2 1x, /img/fig31_5x.jp2 1.5x, /img/fig32x.jp2 2x, /img/fig33x.jp2 3x">
+      <source type="image/jpeg" srcset="/img/fig31x.jpg 1x, /img/fig31_5x.jpg 1.5x, /img/fig32x.jpg 2x, /img/fig33x.jpg 3x">
+      <img src="/img/fig31x.png" alt="t = (v - v₀)/a" style="width:100%; max-width:300px;">
+    </picture>
   </noscript>
   <figcaption>Fig 3. Time</figcaption>
 </figure>
@@ -147,7 +162,12 @@ First, some theory and formulae for accelerated movement:
       </mfrac>
   </math>
   <noscript>
-    <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*1mb37V5aKbp7-OtcaNmrXQ.png" alt="Displacement formula" style="width:100%">
+    <picture>
+      <source type="image/webp" srcset="/img/fig41x.webp 1x, /img/fig41_5x.webp 1.5x, /img/fig42x.webp 2x, /img/fig43x.webp 3x">
+      <source type="image/jp2" srcset="/img/fig41x.jp2 1x, /img/fig41_5x.jp2 1.5x, /img/fig42x.jp2 2x, /img/fig43x.jp2 3x">
+      <source type="image/jpeg" srcset="/img/fig41x.jpg 1x, /img/fig41_5x.jpg 1.5x, /img/fig42x.jpg 2x, /img/fig43x.jpg 3x">
+      <img src="/img/fig41x.png" alt="Δx = v²-v₀/2a" style="width:100%; max-width:300px;">
+    </picture>
   </noscript>
   <figcaption>Fig4. Displacement</figcaption>
 </figure>
@@ -224,6 +244,6 @@ Turns out, the look of function will be different for each end velocity. Let us 
 
 So you see the relation here — the less end velocity will differ from start velocity, the more flat cubic bezier function will be, up to the limit of simple line (cubic-bezier(.33,.33,.66,.66) or linear). The maximal difference between start and end velocity is when end velocity is zero. In this case function will be cubic-bezier(0.33, 0.66, 0.66, 1). And in any case in between, the function will look like cubic-bezier(0.33, 0.66-x, 0.66, 1-x) where x = abs(endVelocity/startVelocity).
 
-So we're finally here! The demo of working implementation could be seen [http://alexeykomov.me/momentum-scroller-demo](http://alexeykomov.me/momentum-scroller-demo)(should be visited from iOS device).
+So we're finally here! The demo of working implementation could be seen [http://alexeykomov.me/momentum-scroller-demo](http://alexeykomov.me/momentum-scroller-demo)(should be visited from iOS device or you can simulate it with dev tools).
 
 Thank you for your attention.
