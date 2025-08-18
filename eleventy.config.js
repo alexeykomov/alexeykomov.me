@@ -3,6 +3,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { minify } from "html-minifier-terser";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -40,9 +41,8 @@ export default async function(eleventyConfig) {
 	// Bundle <style> content and adds a {% css %} paired shortcode
 	eleventyConfig.addBundle("css", {
 		toFileDirectory: "dist",
-		// Add all <style> content to `css` bundle (use <style eleventy:ignore> to opt-out)
-		// Supported selectors: https://www.npmjs.com/package/posthtml-match-helper
-		bundleHtmlContentFromSelector: "style",
+		// Don't bundle inline styles - keep them in HTML
+		// bundleHtmlContentFromSelector: "style",
 	});
 
 	// Bundle <script> content and adds a {% js %} paired shortcode
@@ -118,6 +118,20 @@ export default async function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
+	});
+
+	// HTML Minification
+	eleventyConfig.addTransform("htmlmin", function(content) {
+		if (process.env.ELEVENTY_RUN_MODE === "build" && this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+			return minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+				minifyCSS: true,
+				minifyJS: true
+			});
+		}
+		return content;
 	});
 
 	// Features to make your build faster (when you need them)
