@@ -6,4 +6,34 @@ const eleventyNavigation = {
 ---
 # Projects
 
-Coming soon...
+<div class="projects-grid">
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/reflect-cover-1000.webp 1x, /img/reflect-cover-2000.webp 2x, /img/reflect-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/reflect-cover-1000.jpg 1x, /img/reflect-cover-2000.jpg 2x, /img/reflect-cover-3000.jpg 3x">
+				<img src="/img/reflect-cover-1000.jpg" alt="Reflect Calendar cover">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title"><a href="https://reflectcal.com" target="_blank">Reflect Calendar</a></h3>
+			<p class="project-description">A fast and minimalist web calendar designed for productivity and simplicity. Built with performance in mind, it offers a clean interface for managing your schedule without the bloat.</p>
+			<a href="https://reflectcal.com" class="project-link" target="_blank">Visit Project →</a>
+		</div>
+	</div>
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/radzima-cover-1000.webp 1x, /img/radzima-cover-2000.webp 2x, /img/radzima-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/radzima-cover-1000.jpg 1x, /img/radzima-cover-2000.jpg 2x, /img/radzima-cover-3000.jpg 3x">
+				<img src="/img/radzima-cover-1000.jpg" alt="Radzima.app screenshots showing three different screens">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title"><a href="https://radzima.app/" target="_blank">Radzima.app</a></h3>
+			<p class="project-description">An iOS native application showcasing modern mobile development practices. Built with attention to native iOS patterns and user experience guidelines.</p>
+			<a href="https://radzima.app/" class="project-link" target="_blank">Visit Project →</a>
+		</div>
+	</div>
+</div>
+

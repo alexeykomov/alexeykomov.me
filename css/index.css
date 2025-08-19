@@ -374,3 +374,98 @@ figure {
 	text-align: center;
 }
 
+/* Projects */
+.projects-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	max-width: 980px;
+	margin: 2rem auto 0;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	overflow: hidden;
+	background: var(--background-color);
+	width: 100%;
+}
+
+.project-cover {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	flex-shrink: 0;
+}
+
+.project-cover img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.project-cover picture {
+	width: 100%;
+}
+
+.project-content {
+	padding: 1.5rem;
+	flex: 1;
+}
+
+.project-title {
+	margin: 0 0 1rem;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: var(--text-color);
+}
+
+.project-title a {
+	color: var(--text-color);
+	text-decoration: none;
+}
+
+.project-title a:hover {
+	color: var(--text-color-link-active);
+	text-decoration: underline;
+}
+
+.project-title a:visited {
+	color: var(--text-color);
+}
+
+.project-description {
+	margin: 0 0 1.5rem;
+	line-height: 1.6;
+	color: var(--text-color);
+}
+
+.project-link {
+	display: inline-block;
+	background-color: #4d94ff;
+	color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: 500;
+	transition: background-color 0.2s ease;
+}
+
+.project-link:hover {
+	background-color: #3380ff;
+	color: white;
+}
+
+.project-link:visited {
+	background-color: #4d94ff;
+	color: white;
+}
+
+main :first-child .project-cover {
+	margin-top: 1.5rem;
+}
+
+
