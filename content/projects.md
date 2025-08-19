@@ -35,5 +35,18 @@ const eleventyNavigation = {
 			<a href="https://radzima.app/" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/cube-carousel-cover-1000.webp 1x, /img/cube-carousel-cover-2000.webp 2x, /img/cube-carousel-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/cube-carousel-cover-1000.jpg 1x, /img/cube-carousel-cover-2000.jpg 2x, /img/cube-carousel-cover-3000.jpg 3x">
+				<img src="/img/cube-carousel-cover-1000.jpg" alt="Cube carousel UI showing rotating cube interface">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title">Cube Carousel</h3>
+			<p class="project-description">A smooth rotating cube UI similar to Instagram Stories, where each edge displays an image or video. Built with UICollectionView for fluid scrolling and rotation animations.</p>
+		</div>
+	</div>
 </div>
 
