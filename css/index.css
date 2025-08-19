@@ -339,8 +339,14 @@ main h6,
 main ul,
 main ol,
 main .gist,
-ul.post-metadata {
+main .post-metadata-wrapper {
 	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {
+	max-width: calc(680px + 2rem);
 	margin-left: auto;
 	margin-right: auto;
 }

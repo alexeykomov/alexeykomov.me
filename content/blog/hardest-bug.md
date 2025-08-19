@@ -103,10 +103,10 @@ function Vl() {
 
 Do you see any familiarity here? :) It was compiled code for loader, which, here, used "this" to assign property "Rk". Now what we see:
 
-- Initially, in uncompiled file "this" inside plain object was ok, because object existed.
-- After compilation, object was dissolved, and its method became global function, which assigned "Rk" to global space, which, by turn, clobbered some another "Rk" property (in my case, constructor function) which became boolean, true one!
-- Compilation with —debug statement worked because names won't collide, being derived from original ones, like "`$rflect$cal$Loader$main$`".
-- When I redesigned the loader as a class with constructor and prototype, not only it removed error, but also strange warning of unknown type.
+1. Initially, in uncompiled file "this" inside plain object was ok, because object existed.
+2. After compilation, object was dissolved, and its method became global function, which assigned "Rk" to global space, which, by turn, clobbered some another "Rk" property (in my case, constructor function) which became boolean, true one!
+3. Compilation with —debug statement worked because names won't collide, being derived from original ones, like "`$rflect$cal$Loader$main$`".
+4. When I redesigned the loader as a class with constructor and prototype, not only it removed error, but also strange warning of unknown type.
 
 So morals here: do not use "this" inside of plain objects, but only in constructors and prototypes. I knew this and it was told here. But what I didn't know is that `@this` directive won't help to preserve object to which "this" is pointing! It'll just silence compiler. So my version of this rule is — do not ever use "this" outside of constructors and prototype methods AND do not attempt to silence compiler by @this directive.
 
