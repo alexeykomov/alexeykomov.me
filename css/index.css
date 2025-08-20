@@ -547,6 +547,11 @@ main :first-child .project-cover {
 		flex-direction: column;
 		gap: 1rem;
 		padding: 1rem;
+		border-bottom: 1px dashed var(--color-gray-20);
+	}
+	
+	.post-card:last-child {
+		border-bottom: none;
 	}
 
 	.post-cover {
