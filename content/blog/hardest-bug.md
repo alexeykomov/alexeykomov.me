@@ -1,6 +1,6 @@
 ---
 title: "Hardest bug to find. So far…"
-description: A challenging debugging experience from October 2013
+description: A challenging debugging experience of code produced with advanced compilation mode by Closure Compiler.
 date: 2013-10-10
 tags: ["debugging", "programming", "Closure Compiler", "Closure Library"]
 ---

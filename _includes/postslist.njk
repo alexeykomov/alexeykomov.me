@@ -1,8 +1,28 @@
-<ol reversed class="postlist" style="--postlist-index: {{ (postslistCounter or postslist.length) + 1 }}">
+<div class="posts-grid">
 {%- for post in postslist | reverse %}
-	<li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-		<a href="{{ post.url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-		<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
-	</li>
+	<div class="post-card{% if post.url == url %} post-card-active{% endif %}">
+		<div class="post-cover">
+			<picture>
+				{%- if post.url == '/blog/momentum-scrolling/' %}
+				<source type="image/webp" srcset="/img/momentum-scrolling-cover-300.webp 1x, /img/momentum-scrolling-cover-600.webp 2x, /img/momentum-scrolling-cover-900.webp 3x">
+				<source type="image/jpeg" srcset="/img/momentum-scrolling-cover-300.jpg 1x, /img/momentum-scrolling-cover-600.jpg 2x, /img/momentum-scrolling-cover-900.jpg 3x">
+				<img src="/img/momentum-scrolling-cover-300.jpg" alt="Bezier curve visualization">
+				{%- elif post.url == '/blog/hardest-bug/' %}
+				<source type="image/webp" srcset="/img/hardest-bug-cover-300.webp 1x, /img/hardest-bug-cover-600.webp 2x, /img/hardest-bug-cover-900.webp 3x">
+				<source type="image/jpeg" srcset="/img/hardest-bug-cover-300.jpg 1x, /img/hardest-bug-cover-600.jpg 2x, /img/hardest-bug-cover-900.jpg 3x">
+				<img src="/img/hardest-bug-cover-300.jpg" alt="Debugging visualization">
+				{%- else %}
+				<source type="image/webp" srcset="/img/blog-default-cover-1000.webp 1x, /img/blog-default-cover-2000.webp 2x, /img/blog-default-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/blog-default-cover-1000.jpg 1x, /img/blog-default-cover-2000.jpg 2x, /img/blog-default-cover-3000.jpg 3x">
+				<img src="/img/blog-default-cover-1000.jpg" alt="Blog post cover">
+				{%- endif %}
+			</picture>
+		</div>
+		<div class="post-content">
+			<h3 class="post-title"><a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>
+			<p class="post-description">{{ post.data.description }}</p>
+			<time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+		</div>
+	</div>
 {%- endfor %}
-</ol>
+</div>
