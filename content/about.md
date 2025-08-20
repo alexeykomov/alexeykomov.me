@@ -8,6 +8,12 @@ const eleventyNavigation = {
 
 <div style="max-width: 680px; margin: 0 auto;">
 <picture>
+<!-- Dark mode avatar -->
+<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/avatar-dark-1x.webp 1x, /img/avatar-dark-1.5x.webp 1.5x, /img/avatar-dark-2x.webp 2x, /img/avatar-dark-3x.webp 3x">
+<source media="(prefers-color-scheme: dark)" type="image/jp2" srcset="/img/avatar-dark-1x.jp2 1x, /img/avatar-dark-1.5x.jp2 1.5x, /img/avatar-dark-2x.jp2 2x, /img/avatar-dark-3x.jp2 3x">
+<source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/avatar-dark-1x.jpg 1x, /img/avatar-dark-1.5x.jpg 1.5x, /img/avatar-dark-2x.jpg 2x, /img/avatar-dark-3x.jpg 3x">
+
+<!-- Light mode avatar (default) -->
 <source type="image/webp" srcset="/img/avatar1x.webp 1x, /img/avatar1.5x.webp 1.5x, /img/avatar2x.webp 2x, /img/avatar3x.webp 3x">
 <source type="image/jp2" srcset="/img/avatar1x.jp2 1x, /img/avatar1.5x.jp2 1.5x, /img/avatar2x.jp2 2x, /img/avatar3x.jp2 3x">
 <source type="image/jpeg" srcset="/img/avatar1x.jpg 1x, /img/avatar1.5x.jpg 1.5x, /img/avatar2x.jpg 2x, /img/avatar3x.jpg 3x">
