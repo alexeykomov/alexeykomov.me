@@ -549,13 +549,15 @@ main :first-child .project-cover {
 		padding: 1rem;
 		border-bottom: 1px dashed var(--color-gray-20);
 	}
-	
+
 	.post-card:last-child {
 		border-bottom: none;
 	}
 
 	.post-cover {
 		width: 100%;
+		max-width: 200px;
+		margin: 0 auto;
 	}
 }
 
