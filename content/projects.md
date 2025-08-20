@@ -17,7 +17,7 @@ const eleventyNavigation = {
 		</div>
 		<div class="project-content">
 			<h3 class="project-title"><a href="https://reflectcal.com" target="_blank">Reflect Calendar</a></h3>
-			<p class="project-description">A fast and minimalist web calendar designed for productivity and simplicity. Built with performance in mind, it offers a clean interface for managing your schedule without the bloat.</p>
+			<p class="project-description">A fast and minimalist web calendar designed for productivity and simplicity. Built with performance in mind, it offers a clean interface for managing your schedule without the bloat.<br><br>Stack: JavaScript, HTML5, CSS3, Closure Library, Closure Compiler, Closure Templates, Node.js, Express.js, MongoDB, Docker</p>
 			<a href="https://reflectcal.com" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
@@ -31,7 +31,7 @@ const eleventyNavigation = {
 		</div>
 		<div class="project-content">
 			<h3 class="project-title"><a href="https://radzima.app/" target="_blank">Radzima.app</a></h3>
-			<p class="project-description">An iOS native application showcasing modern mobile development practices. Built with attention to native iOS patterns and user experience guidelines.</p>
+			<p class="project-description">An iOS native application showcasing modern mobile development practices. Built with attention to native iOS patterns and user experience guidelines.<br><br>Stack: Objective-C, UIKit, CoreData, Mapbox, Firebase, AWS Amplify, CocoaPods, Fastlane</p>
 			<a href="https://radzima.app/" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
@@ -45,7 +45,7 @@ const eleventyNavigation = {
 		</div>
 		<div class="project-content">
 			<h3 class="project-title">Cube Carousel</h3>
-			<p class="project-description">A smooth rotating cube UI similar to Instagram Stories, where each edge displays an image or video. Built with UICollectionView for fluid scrolling and rotation animations.</p>
+			<p class="project-description">A smooth rotating cube UI similar to Instagram Stories, where each edge displays an image or video. Built with UICollectionView for fluid scrolling and rotation animations.<br><br>Stack: Objective-C, UIKit (UICollectionView), Core Animation (CATransform3D)</p>
 		</div>
 	</div>
 </div>
