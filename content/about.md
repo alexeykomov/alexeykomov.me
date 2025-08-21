@@ -25,8 +25,12 @@ Hello, my name is Alexey, I'm a front-end/fullstack engineer with interest towar
 
 I'm also the author of [Reflect Calendar](https://reflectcal.com), a fast and minimalist web-calendar.
 
-**Core stack:** TypeScript, JavaScript, React, React Native, Node.js  
-**R&D stack:** [Closure Library](https://github.com/google/closure-library), [Closure Compiler](https://developers.google.com/closure/compiler), UIKit/Objective-C
+<dl>
+<dt><strong>Core stack:</strong></dt>
+<dd>TypeScript, JavaScript, React, React Native, Node.js</dd>
+<dt><strong>R&D stack:</strong></dt>
+<dd><a href="https://github.com/google/closure-library">Closure Library</a>, <a href="https://developers.google.com/closure/compiler">Closure Compiler</a>, UIKit/Objective-C</dd>
+</dl>
 
 My passions include:
 
