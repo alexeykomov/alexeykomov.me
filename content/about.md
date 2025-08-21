@@ -25,7 +25,8 @@ Hello, my name is Alexey, I'm a front-end/fullstack engineer with interest towar
 
 I'm also the author of [Reflect Calendar](https://reflectcal.com), a fast and minimalist web-calendar.
 
-I'd love to collaborate on scientific open source project (web or mobile).
+**Core stack:** TypeScript, JavaScript, React, React Native, Node.js  
+**R&D stack:** [Closure Library](https://github.com/google/closure-library), [Closure Compiler](https://developers.google.com/closure/compiler), UIKit/Objective-C
 
 My passions include:
 
@@ -35,21 +36,13 @@ My passions include:
 4. Simplicity.
 5. Challenging problems on the edge of what is possible in Web platform.
 
-## Stack
-
-Currently working with:
-
-**Languages:** JavaScript, TypeScript, HTML/CSS
-**Frontend:** React, React Native, Redux
-**Backend:** Node.js, Google Cloud
-**Mobile:** Cross-platform development with React Native
-**Tools:** GitHub, Closure Library, Closure Compiler
-
-I have experience building large-scale web applications and mobile apps, with a focus on performance optimization and clean architecture.
+I have experience building large-scale web applications and mobile apps, with a focus on performance optimization (particularly UI responsiveness and resources size).
 
 Personal interests include, among other, traveling, books and music.
 
 Here's my [GitHub profile](https://github.com/alexeykomov/) and [resume](https://alexeykomov.github.io/resume/resume.pdf).
+
+I'd love to collaborate on scientific open source project (web or mobile).
 
 Open to consulting work → <a href="#" id="mail-link-about">e-mail</a>.
 

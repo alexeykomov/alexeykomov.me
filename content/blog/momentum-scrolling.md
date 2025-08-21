@@ -1,6 +1,6 @@
 ---
 title: Physics of Momentum Scrolling
-description: Exploring the technical challenges and solutions for implementing custom scrolling behavior in iOS Safari, using css transform matrix and cubic bezier curves.
+description: 'Implementing custom scrolling behavior in iOS Safari, using 3 "T"s: transform, translate and transition. Specifically css transform matrix and cubic bezier curves are used. Based on GMail starting points with the  research of critical missing parts.'
 date: 2016-06-02
 tags: scrolling, iOS, Safari, web development, physics
 ---
