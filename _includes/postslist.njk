@@ -23,6 +23,14 @@
 				<source type="image/webp" srcset="/img/closure-npm-export-cover-300.webp 1x, /img/closure-npm-export-cover-600.webp 2x, /img/closure-npm-export-cover-900.webp 3x">
 				<source type="image/jpeg" srcset="/img/closure-npm-export-cover-300.jpg 1x, /img/closure-npm-export-cover-600.jpg 2x, /img/closure-npm-export-cover-900.jpg 3x">
 				<img src="/img/closure-npm-export-cover-300.jpg" alt="Google Closure Compiler logo">
+				{%- elif post.url == '/blog/infinite-currying-sum/' %}
+				<!-- Dark mode cover -->
+				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/lambda-cover-dark-300.webp 1x, /img/lambda-cover-dark-600.webp 2x, /img/lambda-cover-dark-900.webp 3x">
+				<source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/lambda-cover-dark-300.jpg 1x, /img/lambda-cover-dark-600.jpg 2x, /img/lambda-cover-dark-900.jpg 3x">
+				<!-- Light mode cover (default) -->
+				<source type="image/webp" srcset="/img/lambda-cover-300.webp 1x, /img/lambda-cover-600.webp 2x, /img/lambda-cover-900.webp 3x">
+				<source type="image/jpeg" srcset="/img/lambda-cover-300.jpg 1x, /img/lambda-cover-600.jpg 2x, /img/lambda-cover-900.jpg 3x">
+				<img src="/img/lambda-cover-300.jpg" alt="Lambda symbol">
 				{%- else %}
 				<source type="image/webp" srcset="/img/blog-default-cover-1000.webp 1x, /img/blog-default-cover-2000.webp 2x, /img/blog-default-cover-3000.webp 3x">
 				<source type="image/jpeg" srcset="/img/blog-default-cover-1000.jpg 1x, /img/blog-default-cover-2000.jpg 2x, /img/blog-default-cover-3000.jpg 3x">
