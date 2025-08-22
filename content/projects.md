@@ -31,7 +31,7 @@ const eleventyNavigation = {
 		</div>
 		<div class="project-content">
 			<h3 class="project-title"><a href="https://radzima.app/" target="_blank">Radzima.app</a></h3>
-			<p class="project-description">An iOS native application showcasing modern mobile development practices. Built with attention to native iOS patterns and user experience guidelines.<br><br>Stack: Objective-C, UIKit, CoreData, Mapbox, Firebase, AWS Amplify, CocoaPods, Fastlane</p>
+			<p class="project-description">An iOS native application for internal tourism activities in Belarus, specifically for visiting places of nature. Features more than 500 national parks, historical sites and landmarks of Belarus, biking and walking routes, and various tours.<br><br>Stack: Objective-C, UIKit, CoreData, Mapbox, Firebase, AWS Amplify, CocoaPods, Fastlane</p>
 			<a href="https://radzima.app/" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>

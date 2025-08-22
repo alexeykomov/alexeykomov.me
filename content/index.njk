@@ -51,9 +51,79 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<h2>Projects</h2>
+<h2>Highlighted Projects</h2>
 
-<p>Check out my <a href="/projects/">projects</a> to see what I've been working on.</p>
+<div class="projects-grid">
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/reflect-cover-1000.webp 1x, /img/reflect-cover-2000.webp 2x, /img/reflect-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/reflect-cover-1000.jpg 1x, /img/reflect-cover-2000.jpg 2x, /img/reflect-cover-3000.jpg 3x">
+				<img src="/img/reflect-cover-1000.jpg" alt="Reflect Calendar cover">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title"><a href="https://reflectcal.com" target="_blank">Reflect Calendar</a></h3>
+			<p class="project-description">A fast and minimalist web calendar designed for productivity and simplicity. Built with performance in mind, it offers a clean interface for managing your schedule without the bloat.</p>
+			<a href="https://reflectcal.com" class="project-link" target="_blank">Visit Project →</a>
+		</div>
+	</div>
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/radzima-cover-1000.webp 1x, /img/radzima-cover-2000.webp 2x, /img/radzima-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/radzima-cover-1000.jpg 1x, /img/radzima-cover-2000.jpg 2x, /img/radzima-cover-3000.jpg 3x">
+				<img src="/img/radzima-cover-1000.jpg" alt="Radzima.app screenshots showing three different screens">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title"><a href="https://radzima.app/" target="_blank">Radzima.app</a></h3>
+			<p class="project-description">An iOS native application for internal tourism activities in Belarus, specifically for visiting places of nature. Features more than 500 national parks, historical sites and landmarks of Belarus, biking and walking routes, and various tours.</p>
+			<a href="https://radzima.app/" class="project-link" target="_blank">Visit Project →</a>
+		</div>
+	</div>
+</div>
+
+<p>Check out all my <a href="/projects/">projects</a> to see what I've been working on.</p>
+
+<h2>Highlighted Posts</h2>
+
+<div class="posts-grid">
+	<div class="post-card">
+		<div class="post-cover">
+			<picture>
+				<!-- Dark mode cover -->
+				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/momentum-scrolling-cover-dark-300.webp 1x, /img/momentum-scrolling-cover-dark-600.webp 2x, /img/momentum-scrolling-cover-dark-900.webp 3x">
+				<source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/momentum-scrolling-cover-dark-300.jpg 1x, /img/momentum-scrolling-cover-dark-600.jpg 2x, /img/momentum-scrolling-cover-dark-900.jpg 3x">
+				<!-- Light mode cover (default) -->
+				<source type="image/webp" srcset="/img/momentum-scrolling-cover-300.webp 1x, /img/momentum-scrolling-cover-600.webp 2x, /img/momentum-scrolling-cover-900.webp 3x">
+				<source type="image/jpeg" srcset="/img/momentum-scrolling-cover-300.jpg 1x, /img/momentum-scrolling-cover-600.jpg 2x, /img/momentum-scrolling-cover-900.jpg 3x">
+				<img src="/img/momentum-scrolling-cover-300.jpg" alt="Bezier curve visualization">
+			</picture>
+		</div>
+		<div class="post-content">
+			<h3 class="post-title"><a href="/blog/momentum-scrolling/">Physics of Momentum Scrolling</a></h3>
+			<p class="post-description">Implementing custom scrolling behavior in iOS Safari, using 3 "T"s: transform, translate and transition. Specifically css transform matrix and cubic bezier curves are used. Based on GMail starting points with the research of critical missing parts.</p>
+			<time class="post-date" datetime="2016-06-02">June 2016</time>
+		</div>
+	</div>
+	<div class="post-card">
+		<div class="post-cover">
+			<picture>
+				<source type="image/webp" srcset="/img/hardest-bug-cover-300.webp 1x, /img/hardest-bug-cover-600.webp 2x, /img/hardest-bug-cover-900.webp 3x">
+				<source type="image/jpeg" srcset="/img/hardest-bug-cover-300.jpg 1x, /img/hardest-bug-cover-600.jpg 2x, /img/hardest-bug-cover-900.jpg 3x">
+				<img src="/img/hardest-bug-cover-300.jpg" alt="Debugging visualization">
+			</picture>
+		</div>
+		<div class="post-content">
+			<h3 class="post-title"><a href="/blog/hardest-bug/">Hardest bug to find. So far…</a></h3>
+			<p class="post-description">A challenging debugging experience of code produced with advanced compilation mode by Closure Compiler.</p>
+			<time class="post-date" datetime="2013-10-10">October 2013</time>
+		</div>
+	</div>
+</div>
+
+<p>Check out all my <a href="/blog/">blog posts</a> for more technical articles.</p>
 
 {# List every content page in the project #}
 {#
