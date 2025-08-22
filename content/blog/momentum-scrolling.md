@@ -12,8 +12,8 @@ When developing one of my projects — [Reflect calendar](https://reflectcal.com
 This problem also manifests itself when you're dragging the whole screen by some element outside of scrollable area, and then trying to scroll inside that area. You should wait until the whole screen "settles down" and approximately one more second to do that. Looks like this problem has a name — "overscroll".
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/blog/momentum-scrolling/ios-safari-scrolling.webm" type="video/webm">
-  <source src="/blog/momentum-scrolling/ios-safari-scrolling.mp4" type="video/mp4">
+  <source src="/videos/ios-safari-scrolling.webm" type="video/webm">
+  <source src="/videos/ios-safari-scrolling.mp4" type="video/mp4">
   <picture style="width:100%; max-width:270px;">
     <source srcset="/blog/momentum-scrolling/0BeGvm-juB-270.webp" type="image/webp">
     <img src="/blog/momentum-scrolling/0BeGvm-juB-270.gif" alt="iOS Safari scrolling issue demonstration" style="width:100%; max-width:270px;">
@@ -33,8 +33,8 @@ We're discovering immediately that Ryan's solution is based on transitions — t
 First, let's show what momentum scrolling will look in the end.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/blog/momentum-scrolling/momentum-scrolling-result.webm" type="video/webm">
-  <source src="/blog/momentum-scrolling/momentum-scrolling-result.mp4" type="video/mp4">
+  <source src="/videos/momentum-scrolling-result.webm" type="video/webm">
+  <source src="/videos/momentum-scrolling-result.mp4" type="video/mp4">
   <picture style="width:100%; max-width:270px;">
     <source srcset="/blog/momentum-scrolling/bNFA7l4R84-270.webp" type="image/webp">
     <img src="/blog/momentum-scrolling/bNFA7l4R84-270.gif" alt="Momentum scrolling implementation result" style="width:100%; max-width:270px;">
@@ -181,8 +181,8 @@ So now we have basic implementation of how content will behave should it deceler
 Also, quite simple is the returning content from out of bounds position to frame. Here's how it looks.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/blog/momentum-scrolling/returning-content.webm" type="video/webm">
-  <source src="/blog/momentum-scrolling/returning-content.mp4" type="video/mp4">
+  <source src="/videos/returning-content.webm" type="video/webm">
+  <source src="/videos/returning-content.mp4" type="video/mp4">
   <picture style="width:100%; max-width:270px;">
     <source srcset="/blog/momentum-scrolling/ncTGSXtJmr-270.webp" type="image/webp">
     <img src="/blog/momentum-scrolling/ncTGSXtJmr-270.gif" alt="Returning content from out of bounds position" style="width:100%; max-width:270px;">
@@ -204,8 +204,8 @@ Now the most complex case is left — when deceleration takes content out of bou
 To better illustrate this, here's a visualization.
 
 <video autoplay loop muted playsinline style="width:100%; max-width:270px;">
-  <source src="/blog/momentum-scrolling/three-stage-transition.webm" type="video/webm">
-  <source src="/blog/momentum-scrolling/three-stage-transition.mp4" type="video/mp4">
+  <source src="/videos/three-stage-transition.webm" type="video/webm">
+  <source src="/videos/three-stage-transition.mp4" type="video/mp4">
   <picture style="width:100%; max-width:270px;">
     <source srcset="/blog/momentum-scrolling/t8OoUDI5tr-270.webp" type="image/webp">
     <img src="/blog/momentum-scrolling/t8OoUDI5tr-270.gif" alt="Three-stage transition visualization" style="width:100%; max-width:270px;">
@@ -223,16 +223,16 @@ Turns out, the look of function will be different for each end velocity. Let us 
 <figure>
   <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 1rem 0;">
     <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/NYKY-_ffbA-300.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/NYKY-_ffbA-300.jpg" alt="Bezier function with zero end velocity" loading="lazy" decoding="async" width="300" height="600">
+      <source srcset="/blog/momentum-scrolling/fig11x.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/fig11x.jpg" alt="Bezier function with zero end velocity" loading="lazy" decoding="async" width="300" height="600">
     </picture>
     <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/C4a8Qig9ne-300.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/C4a8Qig9ne-300.jpg" alt="Bezier function with non-zero end velocity" loading="lazy" decoding="async" width="300" height="600">
+      <source srcset="/blog/momentum-scrolling/fig21x.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/fig21x.jpg" alt="Bezier function with non-zero end velocity" loading="lazy" decoding="async" width="300" height="600">
     </picture>
     <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/bs22Kv3DAk-300.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/bs22Kv3DAk-300.jpg" alt="Bezier function with same start and end velocity" loading="lazy" decoding="async" width="300" height="600">
+      <source srcset="/blog/momentum-scrolling/fig31x.webp" type="image/webp">
+      <img src="/blog/momentum-scrolling/fig31x.jpg" alt="Bezier function with same start and end velocity" loading="lazy" decoding="async" width="300" height="600">
     </picture>
   </div>
   <figcaption>Different bezier deceleration functions.</figcaption>
