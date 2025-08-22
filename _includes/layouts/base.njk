@@ -5,7 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
-		<meta name="theme-color" content="#f6f6f6">
+		<meta name="theme-color" content="#4d94ff" media="(prefers-color-scheme: light)">
+		<meta name="theme-color" content="#082840" media="(prefers-color-scheme: dark)">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		
 		{#- Open Graph meta tags #}

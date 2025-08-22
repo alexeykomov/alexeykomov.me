@@ -321,6 +321,7 @@ main dl a[href],
 main p a[href]:hover,
 main dl a[href]:hover,
 .post-tag:hover {
+	color: white;
 	background-color: #3380ff;
 	text-decoration: underline;
 }
