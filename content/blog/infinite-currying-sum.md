@@ -37,7 +37,15 @@ sum(1)(4)(1) == 6;//true
 
 And how do we override this "to NaN" behavior and return whatever value we want? By implementing our own `valueOf`. So now, at least this part is clear:
 
-<script src="https://gist.github.com/alexeykomov/d6d6989865aa6676650f5547692a130d.js?file=sum-by-currying-blog-1.js"></script>
+```javascript
+function sum(firstArgument) {
+    //...implementation of newFunction is here
+    newFunction.valueOf = () => firstArgument;
+    return newFunction;
+}
+
+sum(1) == 1; //true
+```
 
 Okay, now it works with
 
@@ -57,7 +65,13 @@ const newFunction = sum;
 
 So lets wrap sum with function that takes argument and calls sum with this new argument + old argument `firstArgument` from main sum function.
 
-<script src="https://gist.github.com/alexeykomov/e6e5120858405daf6c64ee95ac11fec0.js?file=sum-by-currying-blog-2.js"></script>
+```javascript
+function sum(firstArgument) {
+  const nextSum = secondArgument => sum.call(null, firstArgument + secondArgument);
+  nextSum.valueOf = () => firstArgument;
+  return nextSum;
+}
+```
 
 Okay, let's test this implementation.
 
@@ -76,7 +90,19 @@ Those of you who eager to get a solution could stick to this one ✋. But if you
 
 Okay, to be honest, I don't like previous solution that much. How about this one?
 
-<script src="https://gist.github.com/alexeykomov/7ce0d67813e602e5a4d45adcba28f508.js?file=sum-by-currying-stack.js"></script>
+```javascript
+function sum(firstArg, opt_argsStack) {
+    const argsStack = (opt_argsStack || []).concat([firstArg]);
+    const nextSum = nextArg => sum(nextArg, argsStack);
+    nextSum.valueOf = () => argsStack.reduce((a, b) => a + b);
+    return nextSum;
+}
+
+console.log(+sum(1));
+console.log(+sum(1)(2));
+console.log(+sum(1)(2)(3));
+console.log(+sum(1)(2)(3)(4));
+```
 
 Here, we pass the stack of all accumulated arguments down to recursive call. And in `valueOf` call, stack is transformed to a number via reduce just in time. This gives us more flexibility, imo, if we wanted to change chained sum to chained multiplication or whatever else — we just plug in different reduce function.
 

@@ -43,7 +43,41 @@ First, let's show what momentum scrolling will look in the end.
 
 Ryan's article describes the basic DOM setup, drag'n'drop part via touch events and translate3d transform property. The drag and translate parts should be fairly intuitive. Now, the heart of logic is this method — doing momentum whenever user releases touch with some velocity prior to that.
 
-<script src="https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b.js?file=do-momentum.js"></script>
+```javascript
+rflect.ui.MomentumScroller.prototype.doMomentum = function() {
+    var velocity = this.getEndVelocity();
+    if (velocity != 0) {
+        var acceleration = this.getAcceleration(velocity);
+        var displacement = - (velocity * velocity) / (2 * acceleration);
+        var time = - velocity / acceleration;
+        var newY = this.contentOffsetY + displacement;
+
+        if (this.positionIsOutOfBounds(newY)) {
+            this.setUpTransitionStage1();
+        } else {
+            let transition =
+                rflect.browser.css.getSelectorCasedProperty('transform') + ' ' +
+                time + 'ms cubic-bezier(0.33, 0.66, 0.66, 1)';
+
+            rflect.browser.css.setTransition(this.element, transition);
+            rflect.browser.css.setTransition(this.getScrollBarContainer(), transition);
+
+            this.contentOffsetY = newY;
+
+            rflect.browser.css.setTransform(this.element,
+                `translate3d(0, ${newY}px, 0)`);
+
+            rflect.browser.css.setTransform(this.getScrollBarContainer(),
+                `translate3d(0, ${-(newY / this.getSizeRatio() -
+                this.getScrollBarLineHeight() / 2)}px, 0)`);
+        }
+
+        this.isDecelerating_ = true;
+    } else {
+        this.showScrollBarDelayed(false);
+    }
+}
+```
 
 As you can see, here we're doing: getting end velocity of user's touch ([line #2](https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b#file-do-momentum-js-L2)), calculating displacement ([line #7](https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b#file-do-momentum-js-L7)) and time ([line #8](https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b#file-do-momentum-js-L8)). Then we're updating element with new position ([line #28](https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b#file-do-momentum-js-L28)) via translation. And, finally, in order for movement to look natural, we're applying proper transition ([line #21](https://gist.github.com/alexeykomov/d27ebc94b1f302d03baf5ba7957d199b#file-do-momentum-js-L21)) to scrollable element. This transition function is cubic-bezier(0.33, 0.66, 0.66, 1) and is kindly given by Ryan.
 
@@ -153,6 +187,7 @@ First, some theory and formulae for accelerated movement:
               <msubsup>
                   <mi>v</mi>
                   <mn>0</mn>
+                  <mn>2</mn>
               </msubsup>
           </mrow>
           <mrow>
@@ -191,7 +226,37 @@ Also, quite simple is the returning content from out of bounds position to frame
 
 Implementation of this method is here.
 
-<script src="https://gist.github.com/alexeykomov/5181836ee013465bd85f825dac9a7a5e.js?file=snap-to-bounds.js"></script>
+```javascript
+rflect.ui.MomentumScroller.prototype.snapToBounds = function() {
+    const transition = rflect.browser.css.getSelectorCasedProperty('transform') +
+        ' ' + 500 + 'ms ease-out';
+
+    this.setTransitionAll(transition);
+
+    // Different out of bounds cases:
+    // 1. If content is lower than frame upper border
+    if (this.contentOffsetY > 0) {
+        this.contentOffsetY = 0;
+        rflect.browser.css.setTransform(this.getScrollBarContainer(),
+            `translate3d(0, ${(this.getScrollBarLineHeight() / 2)}px, 0)`);
+    }
+    else {
+        // 2. If content is higher that frame lower border.
+        this.contentOffsetY = this.getLowestContentPosition();
+        rflect.browser.css.setTransform(this.getScrollBarContainer(),
+            `translate3d(0, ${this.frameElementSize.height -
+            this.getScrollBarLineHeight() / 2}px, 0)`);
+    }
+
+    rflect.browser.css.setTransform(this.element,
+        `translate3d(0, ${this.contentOffsetY}px, 0)`);
+
+    rflect.browser.css.setTransform(this.getScrollBarLine(),
+        `scaleY(${this.getScrollBarLineHeight()})`);
+
+    this.isDecelerating_ = true;
+}
+```
 
 As you can see, it is simply detection of whether we're out of bounds and then applying transition to return content into frame. Transition function is simple ease-out and time is constant 500ms.
 
