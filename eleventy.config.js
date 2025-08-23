@@ -67,7 +67,7 @@ export default async function(eleventyConfig) {
 		stylesheet: "pretty-atom-feed.xsl",
 		templateData: {
 			eleventyNavigation: {
-				key: "📡 Feed",
+				key: "Feed",
 				order: 4
 			}
 		},
