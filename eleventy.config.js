@@ -1,21 +1,46 @@
-import { IdAttributePlugin, InputPathToUrlTransformPlugin, HtmlBasePlugin } from "@11ty/eleventy";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import {
+	IdAttributePlugin,
+	InputPathToUrlTransformPlugin,
+	HtmlBasePlugin
+} from "@11ty/eleventy";
+import {feedPlugin} from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-import { minify } from "html-minifier-terser";
+import {eleventyImageTransformPlugin} from "@11ty/eleventy-img";
+import {minify} from "html-minifier-terser";
+import {createHighlighter} from "shiki";
 
 import pluginFilters from "./_config/filters.js";
 
+async function shikiPlugin(configuration, options) {
+	const highlighter = await createHighlighter({
+		themes: Object.values(options.themes),
+		langs: options.langs
+	});
+	configuration.amendLibrary("md", (library) => {
+		library.set({
+			highlight: (code, language) => {
+				return highlighter.codeToHtml(code, {
+					lang: language,
+					themes: {
+						light: options.themes.light,
+						dark: options.themes.dark,
+					},
+				});
+			},
+		});
+	});
+}
+
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function(eleventyConfig) {
+export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if (data.draft) {
-      data.title = `${data.title} (draft)`;
-    }
+		if (data.draft) {reb
+			data.title = `${data.title} (draft)`;
+		}
 
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
+		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
 		}
 	});
@@ -54,9 +79,35 @@ export default async function(eleventyConfig) {
 	});
 
 	// Official plugins
-	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-		preAttributes: { tabindex: 0 }
-	});
+	/** The eleventy configuration function
+	 * @param {UserConfig} configuration
+	 */
+
+	eleventyConfig.addPlugin(
+		shikiPlugin,
+		/** @type {Options} */ ({
+			// Choose your theme
+			// Define themes to be loaded
+			themes: {
+				light: "github-light",
+				dark: "github-dark"
+			},
+			langs: [
+				"bash",
+				"html",
+				"toml",
+				"rust",
+				"groovy",
+				"kotlin",
+				"ruby",
+				"swift",
+				"javascript",
+				"typescript",
+				"objective-c",
+			],
+		})
+	);
+
 	eleventyConfig.addPlugin(pluginNavigation);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
@@ -121,7 +172,7 @@ export default async function(eleventyConfig) {
 	});
 
 	// HTML Minification
-	eleventyConfig.addTransform("htmlmin", function(content) {
+	eleventyConfig.addTransform("htmlmin", function (content) {
 		if (process.env.ELEVENTY_RUN_MODE === "build" && this.page.outputPath && this.page.outputPath.endsWith(".html")) {
 			return minify(content, {
 				useShortDoctype: true,

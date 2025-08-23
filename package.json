@@ -46,7 +46,7 @@
 		"html-minifier-terser": "^7.2.0",
 		"luxon": "^3.6.1",
 		"postcss": "^8.5.6",
-		"prismjs": "^1.30.0",
+		"shiki": "^3.11.0",
 		"zod": "^3.25.67",
 		"zod-validation-error": "^3.5.2"
 	},
