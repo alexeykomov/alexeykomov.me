@@ -41,6 +41,7 @@
 		<div class="post-content">
 			<h3 class="post-title"><a href="{{ post.url }}">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a></h3>
 			<p class="post-description">{{ post.data.description }}</p>
+			<div><a href="{{ post.url }}" class="project-link">Read Post →</a></div>
 			<time class="post-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
 		</div>
 	</div>
