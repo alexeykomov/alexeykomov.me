@@ -11,8 +11,8 @@ const eleventyNavigation = {
 		<div class="project-cover">
 			<picture>
 				<source type="image/webp" srcset="/img/reflect-cover-1000.webp 1x, /img/reflect-cover-2000.webp 2x, /img/reflect-cover-3000.webp 3x">
-				<source type="image/jpeg" srcset="/img/reflect-cover-1000.jpg 1x, /img/reflect-cover-2000.jpg 2x, /img/reflect-cover-3000.jpg 3x">
-				<img src="/img/reflect-cover-1000.jpg" alt="Reflect Calendar cover">
+				<source type="image/png" srcset="/img/reflect-cover-1000.png 1x, /img/reflect-cover-2000.png 2x, /img/reflect-cover-3000.png 3x">
+				<img src="/img/reflect-cover-1000.png" alt="Reflect Calendar cover">
 			</picture>
 		</div>
 		<div class="project-content">
@@ -25,8 +25,8 @@ const eleventyNavigation = {
 		<div class="project-cover">
 			<picture>
 				<source type="image/webp" srcset="/img/radzima-cover-1000.webp 1x, /img/radzima-cover-2000.webp 2x, /img/radzima-cover-3000.webp 3x">
-				<source type="image/jpeg" srcset="/img/radzima-cover-1000.jpg 1x, /img/radzima-cover-2000.jpg 2x, /img/radzima-cover-3000.jpg 3x">
-				<img src="/img/radzima-cover-1000.jpg" alt="Radzima.app screenshots showing three different screens">
+				<source type="image/png" srcset="/img/radzima-cover-1000.png 1x, /img/radzima-cover-2000.png 2x, /img/radzima-cover-3000.png 3x">
+				<img src="/img/radzima-cover-1000.png" alt="Radzima.app screenshots showing three different screens">
 			</picture>
 		</div>
 		<div class="project-content">
@@ -39,8 +39,8 @@ const eleventyNavigation = {
 		<div class="project-cover">
 			<picture>
 				<source type="image/webp" srcset="/img/cube-carousel-cover-1000.webp 1x, /img/cube-carousel-cover-2000.webp 2x, /img/cube-carousel-cover-3000.webp 3x">
-				<source type="image/jpeg" srcset="/img/cube-carousel-cover-1000.jpg 1x, /img/cube-carousel-cover-2000.jpg 2x, /img/cube-carousel-cover-3000.jpg 3x">
-				<img src="/img/cube-carousel-cover-1000.jpg" alt="Cube carousel UI showing rotating cube interface">
+				<source type="image/png" srcset="/img/cube-carousel-cover-1000.png 1x, /img/cube-carousel-cover-2000.png 2x, /img/cube-carousel-cover-3000.png 3x">
+				<img src="/img/cube-carousel-cover-1000.png" alt="Cube carousel UI showing rotating cube interface">
 			</picture>
 		</div>
 		<div class="project-content">
