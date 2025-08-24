@@ -286,20 +286,11 @@ This is apex point of my research in this problem and it brought me incredible s
 Turns out, the look of function will be different for each end velocity. Let us illustrate it by this pictures.
 
 <figure>
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 1rem 0;">
-    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/flatten1.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/flatten1.png" alt="Bezier function with zero end velocity" loading="lazy" decoding="async">
-    </picture>
-    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/flatten2.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/flatten2.png" alt="Bezier function with non-zero end velocity" loading="lazy" decoding="async">
-    </picture>
-    <picture style="flex: 1; min-width: 200px; max-width: 600px;">
-      <source srcset="/blog/momentum-scrolling/flatten3.webp" type="image/webp">
-      <img src="/blog/momentum-scrolling/flatten3.png" alt="Bezier function with same start and end velocity" loading="lazy" decoding="async">
-    </picture>
-  </div>
+  <picture>
+    <source srcset="/blog/momentum-scrolling/bezier_composite_600.webp 1x, /blog/momentum-scrolling/bezier_composite_900.webp 1.5x, /blog/momentum-scrolling/bezier_composite_1200.webp 2x" type="image/webp">
+    <source srcset="/blog/momentum-scrolling/bezier_composite_600.png 1x, /blog/momentum-scrolling/bezier_composite_900.png 1.5x, /blog/momentum-scrolling/bezier_composite_1200.png 2x" type="image/png">
+    <img src="/blog/momentum-scrolling/bezier_composite_600.png" alt="Different bezier deceleration functions: zero end velocity, non-zero end velocity, and same start/end velocity" loading="lazy" decoding="async">
+  </picture>
   <figcaption>Different bezier deceleration functions.</figcaption>
 </figure>
 

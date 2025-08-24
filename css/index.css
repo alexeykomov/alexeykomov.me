@@ -365,30 +365,16 @@ figcaption {
 	text-align: center;
 }
 
+noscript + figcaption {
+	margin-top: 1rem;
+}
+
 figure {
 	margin-bottom: 2rem;
 }
 
 math {
-	font-size: 5em;
-}
-
-@media (max-width: 1024px) {
-	math {
-		font-size: 3.5em;
-	}
-}
-
-@media (max-width: 640px) {
-	math {
-		font-size: 2.5em;
-	}
-}
-
-@media (max-width: 400px) {
-	math {
-		font-size: 2em;
-	}
+	font-size: 2.5em;
 }
 
 @media (max-width: 400px) {
