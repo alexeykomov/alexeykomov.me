@@ -314,7 +314,7 @@ main p {
 /* Blog post content and tag link styling */
 main p a[href],
 main dl a[href],
-.post-tag {
+a[href].post-tag {
 	background-color: #4d94ff;
 	color: white;
 	padding: 2px 4px;
@@ -324,7 +324,7 @@ main dl a[href],
 
 main p a[href]:hover,
 main dl a[href]:hover,
-.post-tag:hover {
+a[href].post-tag:hover {
 	color: white;
 	background-color: #3380ff;
 	text-decoration: underline;
