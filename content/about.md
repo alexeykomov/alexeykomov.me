@@ -23,7 +23,7 @@ const eleventyNavigation = {
 
 Hello, my name is Alexey, I'm a front-end/fullstack engineer with interest towards <a href="https://radzima.app/">iOS native development</a>.
 
-I'm also the author of [Reflect Calendar](https://reflectcal.com), a fast and minimalist web-calendar.
+I'm also the author of [Reflect Calendar](https://reflectcal.com/guest), a fast and minimalist web-calendar.
 
 <dl>
 <dt><strong>Core stack:</strong></dt>

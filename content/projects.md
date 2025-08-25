@@ -16,9 +16,9 @@ const eleventyNavigation = {
 			</picture>
 		</div>
 		<div class="project-content">
-			<h3 class="project-title"><a href="https://reflectcal.com" target="_blank">Reflect Calendar</a></h3>
+			<h3 class="project-title"><a href="https://reflectcal.com/guest" target="_blank">Reflect Calendar</a></h3>
 			<p class="project-description">A fast and minimalist web calendar designed for productivity and simplicity. Built with performance in mind, it offers a clean interface for managing your schedule without the bloat.<br><br>Stack: JavaScript, HTML5, CSS3, Closure Library, Closure Compiler, Closure Templates, Node.js, Express.js, MongoDB, Docker</p>
-			<a href="https://reflectcal.com" class="project-link" target="_blank">Visit Project →</a>
+			<a href="https://reflectcal.com/guest" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
 	<div class="project-card">

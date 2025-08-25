@@ -474,7 +474,7 @@ figure {
 	color: var(--text-color);
 }
 
-.project-link {
+a[href].project-link {
 	display: inline-block;
 	background-color: #4d94ff;
 	color: white;
@@ -485,12 +485,12 @@ figure {
 	transition: background-color 0.2s ease;
 }
 
-.project-link:hover {
+a[href].project-link:hover {
 	background-color: #3380ff;
 	color: white;
 }
 
-.project-link:visited {
+a[href].project-link:visited {
 	background-color: #4d94ff;
 	color: white;
 }
