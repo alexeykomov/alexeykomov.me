@@ -238,6 +238,10 @@ header {
 	text-decoration: none;
 }
 
+.index-section {
+	margin-top: 5rem;
+}
+
 /* Posts list */
 .postlist {
 	counter-reset: start-from var(--postlist-index);
@@ -414,6 +418,10 @@ figure {
 	margin: 2rem auto 0;
 }
 
+.projects-grid-index {
+	margin-top: 0;
+}
+
 .project-card {
 	display: flex;
 	flex-direction: column;
@@ -445,6 +453,13 @@ figure {
 .project-content {
 	padding: 1.5rem;
 	flex: 1;
+}
+
+.project-content-index {
+	max-width: 680px;
+	padding: 1.5rem 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .project-title {
@@ -516,6 +531,13 @@ main :first-child .project-cover {
 	align-items: flex-start;
 	gap: 1.5rem;
 	padding: 1.5rem;
+}
+
+.post-card-index {
+	padding: 1.5rem 0;
+	max-width: 680px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .post-cover {
