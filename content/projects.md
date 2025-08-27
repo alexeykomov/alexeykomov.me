@@ -44,8 +44,9 @@ const eleventyNavigation = {
 			</picture>
 		</div>
 		<div class="project-content">
-			<h3 class="project-title">Cube Carousel</h3>
+			<h3 class="project-title"><a href="https://github.com/alexeykomov/cube-carousel" target="_blank">Cube Carousel</a></h3>
 			<p class="project-description">A smooth rotating cube UI similar to <a href="https://about.instagram.com/blog/announcements/introducing-instagram-stories" target="_blank">Instagram Stories</a>, where each edge displays an image or video. Built with <a href="https://developer.apple.com/documentation/uikit/uicollectionview" target="_blank">UICollectionView</a> for fluid scrolling and rotation animations.<br><br>Stack: Objective-C, UIKit (UICollectionView), Core Animation (<a href="https://developer.apple.com/documentation/quartzcore/catransform3d?language=objc" target="_blank">CATransform3D</a>)</p>
+			<a href="https://github.com/alexeykomov/cube-carousel" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
 </div>
