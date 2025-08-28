@@ -77,5 +77,23 @@ const eleventyNavigation = {
 			<a href="https://alexeykomov.github.io/pythagoras-tree/" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
+	<div class="project-card">
+		<div class="project-cover">
+			<picture>
+				<!-- Dark mode cover -->
+				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/fifteen-cover-dark-1000.webp 1x, /img/fifteen-cover-dark-2000.webp 2x, /img/fifteen-cover-dark-3000.webp 3x">
+				<source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/fifteen-cover-dark-1000.jpg 1x, /img/fifteen-cover-dark-2000.jpg 2x, /img/fifteen-cover-dark-3000.jpg 3x">
+				<!-- Light mode cover (default) -->
+				<source type="image/webp" srcset="/img/fifteen-cover-1000.webp 1x, /img/fifteen-cover-2000.webp 2x, /img/fifteen-cover-3000.webp 3x">
+				<source type="image/jpeg" srcset="/img/fifteen-cover-1000.jpg 1x, /img/fifteen-cover-2000.jpg 2x, /img/fifteen-cover-3000.jpg 3x">
+				<img src="/img/fifteen-cover-1000.jpg" alt="Fifteen puzzle game interface">
+			</picture>
+		</div>
+		<div class="project-content">
+			<h3 class="project-title"><a href="https://alexeykomov.github.io/fifteen/" target="_blank">Fifteen Puzzle</a></h3>
+			<p class="project-description">Fifteen puzzle. What's interesting about this experiment is that it's written in <a href="https://clojurescript.org/" target="_blank">ClojureScript</a> using <a href="https://reagent-project.github.io/" target="_blank">Reagent</a>. Rules can be overviewed at <a href="https://en.wikipedia.org/wiki/15_puzzle" target="_blank">Wikipedia</a>.<br><br>Stack: ClojureScript, Reagent, HTML5, CSS3</p>
+			<a href="https://alexeykomov.github.io/fifteen/" class="project-link" target="_blank">Visit Project →</a>
+		</div>
+	</div>
 </div>
 
