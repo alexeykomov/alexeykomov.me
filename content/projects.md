@@ -52,6 +52,10 @@ const eleventyNavigation = {
 	<div class="project-card">
 		<div class="project-cover">
 			<picture>
+				<!-- Dark mode cover -->
+				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/scr-cover-dark-1000.webp 1x, /img/scr-cover-dark-2000.webp 2x, /img/scr-cover-dark-3000.webp 3x">
+				<source media="(prefers-color-scheme: dark)" type="image/png" srcset="/img/scr-cover-dark-1000.png 1x, /img/scr-cover-dark-2000.png 2x, /img/scr-cover-dark-3000.png 3x">
+				<!-- Light mode cover (default) -->
 				<source type="image/webp" srcset="/img/scr-cover-1000.webp 1x, /img/scr-cover-2000.webp 2x, /img/scr-cover-3000.webp 3x">
 				<source type="image/png" srcset="/img/scr-cover-1000.png 1x, /img/scr-cover-2000.png 2x, /img/scr-cover-3000.png 3x">
 				<img src="/img/scr-cover-1000.png" alt="Telegram Chart Contest interface showing interactive charts">
@@ -59,13 +63,17 @@ const eleventyNavigation = {
 		</div>
 		<div class="project-content">
 			<h3 class="project-title"><a href="https://alexeykomov.github.io/chart-contest/" target="_blank">Telegram Chart Contest</a></h3>
-			<p class="project-description">JavaScript charting application developed for <a href="https://t.me/contest/6" target="_blank">Telegram's official coding competition</a>. Built from scratch without specialized charting libraries. I didn't win any prize, but it was good opportunity to learn more about Canvas API. I was thinking of extending these charts to a full-fledged charting library someday.<br><br>Stack: JavaScript, HTML5, CSS3, Canvas API</p>
+			<p class="project-description">JavaScript charting application developed for <a href="https://t.me/contest/6" target="_blank">Telegram's official coding competition</a>. Built from scratch without specialized charting libraries. I didn't <a href="https://t.me/contest/58">win</a> any prize, but it was good opportunity to learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas API</a>. I was thinking of extending these charts to a full-fledged charting library someday.<br><br>Stack: JavaScript, HTML5, CSS3, Canvas API</p>
 			<a href="https://alexeykomov.github.io/chart-contest/" class="project-link" target="_blank">Visit Project →</a>
 		</div>
 	</div>
 	<div class="project-card">
 		<div class="project-cover">
 			<picture>
+				<!-- Dark mode cover -->
+				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/pythagoras-tree-cover-dark-1000.webp 1x, /img/pythagoras-tree-cover-dark-2000.webp 2x, /img/pythagoras-tree-cover-dark-3000.webp 3x">
+				<source media="(prefers-color-scheme: dark)" type="image/png" srcset="/img/pythagoras-tree-cover-dark-1000.png 1x, /img/pythagoras-tree-cover-dark-2000.png 2x, /img/pythagoras-tree-cover-dark-3000.png 3x">
+				<!-- Light mode cover (default) -->
 				<source type="image/webp" srcset="/img/pythagoras-tree-cover-1000.webp 1x, /img/pythagoras-tree-cover-2000.webp 2x, /img/pythagoras-tree-cover-3000.webp 3x">
 				<source type="image/png" srcset="/img/pythagoras-tree-cover-1000.png 1x, /img/pythagoras-tree-cover-2000.png 2x, /img/pythagoras-tree-cover-3000.png 3x">
 				<img src="/img/pythagoras-tree-cover-1000.png" alt="Pythagoras tree fractal visualization">
