@@ -8,6 +8,30 @@
 		<meta name="theme-color" content="#4d94ff" media="(prefers-color-scheme: light)">
 		<meta name="theme-color" content="#082840" media="(prefers-color-scheme: dark)">
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-L577X8103G"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-L577X8103G');
+		</script>
+
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+		    (function(m,e,t,r,i,k,a){
+		        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+		        m[i].l=1*new Date();
+		        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+		        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+		    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+		    ym(35859890, 'init', {clickmap:true, accurateTrackBounce:true, trackLinks:true});
+		</script>
+		<noscript><div><img src="https://mc.yandex.ru/watch/35859890" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		<!-- /Yandex.Metrika counter -->
 		
 		{#- Open Graph meta tags #}
 		<meta property="og:title" content="{{ title or metadata.title }}">
