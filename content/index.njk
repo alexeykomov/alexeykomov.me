@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div class="project-card">
 		<div class="project-cover">
 			<picture>
-				<source type="image/avif" srcset="/img/reflect-cover-1000.avif 1x, /img/reflect-cover-2000.avif 2x, /img/reflect-cover-3000.avif 3x">
-				<source type="image/webp" srcset="/img/reflect-cover-1000.webp 1x, /img/reflect-cover-2000.webp 2x, /img/reflect-cover-3000.webp 3x">
-				<source type="image/png" srcset="/img/reflect-cover-1000.png 1x, /img/reflect-cover-2000.png 2x, /img/reflect-cover-3000.png 3x">
-				<img src="/img/reflect-cover-1000.png" alt="Reflect Calendar cover">
-			</picture>
+        <source type="image/avif" srcset="/img/reflect-cover-1000.avif 1000w, /img/reflect-cover-2000.avif 2000w, /img/reflect-cover-3000.avif 3000w" sizes="(min-width: 928px) 928px, 100vw"/>
+        <source type="image/webp" srcset="/img/reflect-cover-1000.webp 1000w, /img/reflect-cover-2000.webp 2000w, /img/reflect-cover-3000.webp 3000w" sizes="(min-width: 928px) 928px, 100vw"/>
+        <source type="image/png" srcset=" /img/reflect-cover-1000.png 1000w, /img/reflect-cover-2000.png 2000w, /img/reflect-cover-3000.png 3000w" sizes="(min-width: 928px) 928px, 100vw"/>
+        <img src="/img/reflect-cover-1000.png" alt="Reflect Calendar cover" width="1000" height="574" sizes="(min-width: 928px) 928px, 100vw" srcset="/img/reflect-cover-1000.png 1000w, /img/reflect-cover-2000.png 2000w, /img/reflect-cover-3000.png 3000w" />
+      </picture>
 		</div>
 		<div class="project-content-index">
 			<h3 class="project-title"><a href="https://reflectcal.com/guest" target="_blank">Reflect Calendar</a></h3>
@@ -72,11 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div class="project-card">
 		<div class="project-cover">
 			<picture>
-				<source type="image/avif" srcset="/img/radzima-cover-1000.avif 1x, /img/radzima-cover-2000.avif 2x, /img/radzima-cover-3000.avif 3x">
-				<source type="image/webp" srcset="/img/radzima-cover-1000.webp 1x, /img/radzima-cover-2000.webp 2x, /img/radzima-cover-3000.webp 3x">
-				<source type="image/png" srcset="/img/radzima-cover-1000.png 1x, /img/radzima-cover-2000.png 2x, /img/radzima-cover-3000.png 3x">
-				<img src="/img/radzima-cover-1000.png" alt="Radzima.app screenshots showing three different screens">
-			</picture>
+        <source type="image/avif" srcset="/img/radzima-cover-1000.avif 1000w, /img/radzima-cover-2000.avif 2000w, /img/radzima-cover-3000.avif 3000w" sizes="(min-width: 928px) 928px, 100vw" />
+        <source type="image/webp" srcset="/img/radzima-cover-1000.webp 1000w, /img/radzima-cover-2000.webp 2000w, /img/radzima-cover-3000.webp 3000w" sizes="(min-width: 928px) 928px, 100vw" />
+        <source type="image/png" srcset="/img/radzima-cover-1000.png 1000w, /img/radzima-cover-2000.png 2000w, /img/radzima-cover-3000.png 3000w" sizes="(min-width: 928px) 928px, 100vw" />
+        <img src="/img/radzima-cover-1000.png" alt="Radzima.app screenshots showing three different screens" width="1000" height="648" srcset="/img/radzima-cover-1000.png 1000w, /img/radzima-cover-2000.png 2000w, /img/radzima-cover-3000.png 3000w" sizes="(min-width: 928px) 928px, 100vw" />
+      </picture>
 		</div>
 		<div class="project-content-index">
 			<h3 class="project-title"><a href="https://radzima.app/" target="_blank">Radzima.app</a></h3>
@@ -94,14 +94,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div class="post-card post-card-index">
 		<div class="post-cover">
 			<picture>
-				<!-- Dark mode cover -->
-				<source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/momentum-scrolling-cover-dark-300.webp 1x, /img/momentum-scrolling-cover-dark-600.webp 2x, /img/momentum-scrolling-cover-dark-900.webp 3x">
-				<source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/momentum-scrolling-cover-dark-300.jpg 1x, /img/momentum-scrolling-cover-dark-600.jpg 2x, /img/momentum-scrolling-cover-dark-900.jpg 3x">
-				<!-- Light mode cover (default) -->
-				<source type="image/webp" srcset="/img/momentum-scrolling-cover-300.webp 1x, /img/momentum-scrolling-cover-600.webp 2x, /img/momentum-scrolling-cover-900.webp 3x">
-				<source type="image/jpeg" srcset="/img/momentum-scrolling-cover-300.jpg 1x, /img/momentum-scrolling-cover-600.jpg 2x, /img/momentum-scrolling-cover-900.jpg 3x">
-				<img src="/img/momentum-scrolling-cover-300.jpg" alt="Bezier curve visualization">
-			</picture>
+        <!-- Dark mode cover -->
+        <source media="(prefers-color-scheme: dark)" type="image/webp" srcset="/img/momentum-scrolling-cover-dark-300.webp 300w, /img/momentum-scrolling-cover-dark-600.webp 600w, /img/momentum-scrolling-cover-dark-900.webp 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <source media="(prefers-color-scheme: dark)" type="image/jpeg" srcset="/img/momentum-scrolling-cover-dark-300.jpg 300w, /img/momentum-scrolling-cover-dark-600.jpg 600w, /img/momentum-scrolling-cover-dark-900.jpg 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <!-- Light mode cover (default) -->
+        <source type="image/webp" srcset="/img/momentum-scrolling-cover-300.webp 300w, /img/momentum-scrolling-cover-600.webp 600w, /img/momentum-scrolling-cover-900.webp 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <source type="image/jpeg" srcset="/img/momentum-scrolling-cover-300.jpg 300w, /img/momentum-scrolling-cover-600.jpg 600w, /img/momentum-scrolling-cover-900.jpg 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <img src="/img/momentum-scrolling-cover-300.jpg" alt="Bezier curve visualization" width="300" height="188" srcset="/img/momentum-scrolling-cover-300.jpg 300w, /img/momentum-scrolling-cover-600.jpg 600w, /img/momentum-scrolling-cover-900.jpg 900w" sizes="(max-width: 640px) 200px, 120px" />
+      </picture>
 		</div>
 		<div class="post-content">
 			<h3 class="post-title"><a href="/blog/momentum-scrolling/">Physics of Momentum Scrolling</a></h3>
@@ -113,10 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	<div class="post-card post-card-index">
 		<div class="post-cover">
 			<picture>
-				<source type="image/webp" srcset="/img/hardest-bug-cover-300.webp 1x, /img/hardest-bug-cover-600.webp 2x, /img/hardest-bug-cover-900.webp 3x">
-				<source type="image/jpeg" srcset="/img/hardest-bug-cover-300.jpg 1x, /img/hardest-bug-cover-600.jpg 2x, /img/hardest-bug-cover-900.jpg 3x">
-				<img src="/img/hardest-bug-cover-300.jpg" alt="Debugging visualization">
-			</picture>
+        <source type="image/webp" srcset="/img/hardest-bug-cover-300.webp 300w, /img/hardest-bug-cover-600.webp 600w, /img/hardest-bug-cover-900.webp 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <source type="image/jpeg" srcset="/img/hardest-bug-cover-300.jpg 300w, /img/hardest-bug-cover-600.jpg 600w, /img/hardest-bug-cover-900.jpg 900w" sizes="(max-width: 640px) 200px, 120px" />
+        <img src="/img/hardest-bug-cover-300.jpg" alt="Debugging visualization" width="300" height="247" srcset="/img/hardest-bug-cover-300.jpg 300w, /img/hardest-bug-cover-600.jpg 600w, /img/hardest-bug-cover-900.jpg 900w" sizes="(max-width: 640px) 200px, 120px" />
+      </picture>
 		</div>
 		<div class="post-content">
 			<h3 class="post-title"><a href="/blog/hardest-bug/">Hardest bug to find. So far…</a></h3>
