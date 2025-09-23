@@ -134,6 +134,12 @@
 		<!-- DynamoDB - Database (2020-2022) -->
 		<text x="145" y="320" text-anchor="end" class="timeline-text">DynamoDB</text>
 		<rect x="644" y="310" width="76" height="12" class="database"/>
+
+		<!-- Google Closure - Frontend (2007-2008, 2012-2020, 2024-2025) -->
+		<text x="145" y="337" text-anchor="end" class="timeline-text">Google Closure</text>
+		<rect x="150" y="327" width="38" height="12" class="frontend"/>
+		<rect x="340" y="327" width="304" height="12" class="frontend"/>
+		<rect x="796" y="327" width="38" height="12" class="frontend"/>
 	</g>
 
 	<!-- Project/Career markers (black lines) -->
@@ -162,23 +168,23 @@
 
 		<!-- Frontend legend -->
 		<rect x="160" y="405" width="12" height="8" class="frontend"/>
-		<text x="178" y="413" class="legend-text">Frontend (JS, React, HTML/CSS, TypeScript)</text>
+		<text x="178" y="413" class="legend-text">Frontend</text>
 
 		<!-- Backend legend -->
 		<rect x="160" y="420" width="12" height="8" class="backend"/>
-		<text x="178" y="428" class="legend-text">Backend (Java, Scala, Node.js, PHP)</text>
+		<text x="178" y="428" class="legend-text">Backend</text>
 
 		<!-- Mobile legend -->
 		<rect x="400" y="405" width="12" height="8" class="mobile"/>
-		<text x="418" y="413" class="legend-text">Mobile (React Native, Swift, Objective-C)</text>
+		<text x="418" y="413" class="legend-text">Mobile</text>
 
 		<!-- Cloud legend -->
 		<rect x="400" y="420" width="12" height="8" class="cloud"/>
-		<text x="418" y="428" class="legend-text">Cloud/DevOps (AWS)</text>
+		<text x="418" y="428" class="legend-text">Cloud/DevOps</text>
 
 		<!-- Database legend -->
 		<rect x="600" y="405" width="12" height="8" class="database"/>
-		<text x="618" y="413" class="legend-text">Database (MySQL, DynamoDB)</text>
+		<text x="618" y="413" class="legend-text">Database</text>
 
 		<!-- Career markers legend -->
 		<rect x="600" y="425" width="2" height="8" fill="#000"/>
