@@ -25,21 +25,21 @@
 
 	<!-- Grid lines (vertical year markers) -->
 	<g class="grid">
-		<line x1="150" y1="50" x2="150" y2="380" class="grid-line"/>
-		<line x1="200" y1="50" x2="200" y2="380" class="grid-line"/>
-		<line x1="250" y1="50" x2="250" y2="380" class="grid-line"/>
-		<line x1="300" y1="50" x2="300" y2="380" class="grid-line"/>
-		<line x1="350" y1="50" x2="350" y2="380" class="grid-line"/>
-		<line x1="400" y1="50" x2="400" y2="380" class="grid-line"/>
-		<line x1="450" y1="50" x2="450" y2="380" class="grid-line"/>
-		<line x1="500" y1="50" x2="500" y2="380" class="grid-line"/>
-		<line x1="550" y1="50" x2="550" y2="380" class="grid-line"/>
-		<line x1="600" y1="50" x2="600" y2="380" class="grid-line"/>
-		<line x1="650" y1="50" x2="650" y2="380" class="grid-line"/>
-		<line x1="700" y1="50" x2="700" y2="380" class="grid-line"/>
-		<line x1="750" y1="50" x2="750" y2="380" class="grid-line"/>
-		<line x1="800" y1="50" x2="800" y2="380" class="grid-line"/>
-		<line x1="850" y1="50" x2="850" y2="380" class="grid-line"/>
+		<line x1="150" y1="55" x2="150" y2="340" class="grid-line"/>
+		<line x1="200" y1="55" x2="200" y2="340" class="grid-line"/>
+		<line x1="250" y1="55" x2="250" y2="340" class="grid-line"/>
+		<line x1="300" y1="55" x2="300" y2="340" class="grid-line"/>
+		<line x1="350" y1="55" x2="350" y2="340" class="grid-line"/>
+		<line x1="400" y1="55" x2="400" y2="340" class="grid-line"/>
+		<line x1="450" y1="55" x2="450" y2="340" class="grid-line"/>
+		<line x1="500" y1="55" x2="500" y2="340" class="grid-line"/>
+		<line x1="550" y1="55" x2="550" y2="340" class="grid-line"/>
+		<line x1="600" y1="55" x2="600" y2="340" class="grid-line"/>
+		<line x1="650" y1="55" x2="650" y2="340" class="grid-line"/>
+		<line x1="700" y1="55" x2="700" y2="340" class="grid-line"/>
+		<line x1="750" y1="55" x2="750" y2="340" class="grid-line"/>
+		<line x1="800" y1="55" x2="800" y2="340" class="grid-line"/>
+		<line x1="850" y1="55" x2="850" y2="340" class="grid-line"/>
 	</g>
 
 	<!-- Year labels -->
@@ -53,7 +53,8 @@
 		<text x="450" y="395" text-anchor="middle" class="year-text">2019</text>
 		<text x="500" y="395" text-anchor="middle" class="year-text">2021</text>
 		<text x="550" y="395" text-anchor="middle" class="year-text">2023</text>
-		<text x="600" y="395" text-anchor="middle" class="year-text">2025</text>
+		<text x="600" y="395" text-anchor="middle" class="year-text">2024</text>
+		<text x="650" y="395" text-anchor="middle" class="year-text">2025</text>
 	</g>
 
 	<!-- Technology timeline rows -->
@@ -114,39 +115,33 @@
 		<text x="145" y="286" text-anchor="end" class="timeline-text">React Native</text>
 		<rect x="450" y="276" width="200" height="12" class="mobile"/>
 
-		<!-- Kotlin - Mobile -->
-		<text x="145" y="303" text-anchor="end" class="timeline-text">Kotlin</text>
-		<rect x="550" y="293" width="100" height="12" class="mobile"/>
-
 		<!-- AWS Services - Cloud -->
-		<text x="145" y="320" text-anchor="end" class="timeline-text">AWS</text>
-		<rect x="475" y="310" width="125" height="12" class="cloud"/>
+		<text x="145" y="303" text-anchor="end" class="timeline-text">AWS</text>
+		<rect x="475" y="293" width="125" height="12" class="cloud"/>
 
 		<!-- DynamoDB - Database -->
-		<text x="145" y="337" text-anchor="end" class="timeline-text">DynamoDB</text>
-		<rect x="475" y="327" width="125" height="12" class="database"/>
+		<text x="145" y="320" text-anchor="end" class="timeline-text">DynamoDB</text>
+		<rect x="475" y="310" width="125" height="12" class="database"/>
 
-		<!-- Python - Backend -->
-		<text x="145" y="354" text-anchor="end" class="timeline-text">Python</text>
-		<rect x="500" y="344" width="150" height="12" class="backend"/>
+
 	</g>
 
 	<!-- Project/Career markers (black lines) -->
 	<g class="career-markers">
 		<!-- Scand period end -->
-		<rect x="200" y="55" width="2" height="310" fill="#000"/>
+		<rect x="200" y="55" width="2" height="285" fill="#000"/>
 		<!-- EPAM start -->
-		<rect x="250" y="55" width="2" height="310" fill="#000"/>
+		<rect x="250" y="55" width="2" height="285" fill="#000"/>
 		<!-- Telefonica/Coca-Cola end -->
-		<rect x="400" y="55" width="2" height="310" fill="#000"/>
+		<rect x="400" y="55" width="2" height="285" fill="#000"/>
 		<!-- Liberty Global start -->
-		<rect x="400" y="55" width="2" height="310" fill="#000"/>
+		<rect x="400" y="55" width="2" height="285" fill="#000"/>
 		<!-- Liberty Global end / Ticketmaster start -->
-		<rect x="450" y="55" width="2" height="310" fill="#000"/>
+		<rect x="450" y="55" width="2" height="285" fill="#000"/>
 		<!-- Ticketmaster end / Cox start -->
-		<rect x="500" y="55" width="2" height="310" fill="#000"/>
+		<rect x="500" y="55" width="2" height="285" fill="#000"/>
 		<!-- Cox end / ADNOC start -->
-		<rect x="550" y="55" width="2" height="310" fill="#000"/>
+		<rect x="550" y="55" width="2" height="285" fill="#000"/>
 	</g>
 
 	<!-- Legend -->
@@ -163,11 +158,11 @@
 
 		<!-- Backend legend -->
 		<rect x="160" y="455" width="12" height="8" class="backend"/>
-		<text x="178" y="463" class="legend-text">Backend (Java, Scala, Node.js, PHP)</text>
+		<text x="178" y="463" class="legend-text">Backend (Java, Scala, Node.js, Python, PHP)</text>
 
 		<!-- Mobile legend -->
 		<rect x="400" y="440" width="12" height="8" class="mobile"/>
-		<text x="418" y="448" class="legend-text">Mobile (React Native, Swift, Objective-C)</text>
+		<text x="418" y="448" class="legend-text">Mobile (React Native, Swift, Objective-C, Kotlin)</text>
 
 		<!-- Cloud legend -->
 		<rect x="400" y="455" width="12" height="8" class="cloud"/>
@@ -185,9 +180,9 @@
 	<!-- Career phases labels -->
 	<g class="career-labels">
 		<text x="175" y="45" text-anchor="middle" class="year-text">Scand</text>
-		<text x="280" y="45" text-anchor="middle" class="year-text">Early EPAM</text>
-		<text x="405" y="45" text-anchor="middle" class="year-text">Liberty Global</text>
-		<text x="470" y="45" text-anchor="middle" class="year-text">Ticketmaster</text>
+		<text x="325" y="45" text-anchor="middle" class="year-text">Early EPAM</text>
+		<text x="425" y="45" text-anchor="middle" class="year-text">Liberty Global</text>
+		<text x="475" y="45" text-anchor="middle" class="year-text">Ticketmaster</text>
 		<text x="525" y="45" text-anchor="middle" class="year-text">Cox Auto</text>
 		<text x="575" y="45" text-anchor="middle" class="year-text">ADNOC</text>
 	</g>
