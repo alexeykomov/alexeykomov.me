@@ -34,7 +34,9 @@ I'm also the author of [Reflect Calendar](https://reflectcal.com/guest), a fast 
 
 You can see T-shape of my professional skills on the timeline below.
 <figure>
-<img src="/img/stack-chart.svg">
+	<a href="/img/stack-chart.svg" target="_blank">
+		<img src="/img/stack-chart.svg" alt="My skills timeline">
+	</a>
 <figcaption>
 My skills timeline
 </figcaption>

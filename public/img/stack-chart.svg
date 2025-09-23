@@ -121,7 +121,7 @@
 
 		<!-- Objective-C - Mobile (2018-2025) -->
 		<text x="145" y="269" text-anchor="end" class="timeline-text">Objective-C</text>
-		<rect x="568" y="259" width="266" height="12" class="mobile"/>
+		<rect x="644" y="259" width="190" height="12" class="mobile"/>
 
 		<!-- React Native - Mobile (2018-2025) -->
 		<text x="145" y="286" text-anchor="end" class="timeline-text">React Native</text>
