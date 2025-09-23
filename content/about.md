@@ -32,6 +32,14 @@ I'm also the author of [Reflect Calendar](https://reflectcal.com/guest), a fast 
 <dd><a href="https://github.com/google/closure-library">Closure Library</a>, <a href="https://developers.google.com/closure/compiler">Closure Compiler</a>, UIKit/Objective-C</dd>
 </dl>
 
+You can see T-shape of my professional skills on the timeline below.
+<figure>
+<img src="/img/stack-chart.svg">
+<figcaption>
+My skills timeline
+</figcaption>
+</figure>
+
 My passions include:
 
 1. Web.
