@@ -375,6 +375,8 @@ noscript + figcaption {
 
 figure {
 	margin-bottom: 2rem;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 math {
