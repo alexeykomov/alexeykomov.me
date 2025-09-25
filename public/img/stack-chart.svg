@@ -101,7 +101,8 @@
 
 		<!-- Node.js - Backend (2016-2025) -->
 		<text x="145" y="184" text-anchor="end" class="timeline-text">Node.js</text>
-		<rect x="492" y="174" width="228" height="12" class="backend"/>
+		<rect x="492" y="174" width="76" height="12" class="backend"/>
+		<rect x="644" y="174" width="76" height="12" class="backend"/>
 
 		<!-- React - Frontend (2016-2025) -->
 		<text x="145" y="201" text-anchor="end" class="timeline-text">React</text>
