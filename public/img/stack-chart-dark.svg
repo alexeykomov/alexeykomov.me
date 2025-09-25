@@ -1,0 +1,209 @@
+<svg width="900" height="520" xmlns="http://www.w3.org/2000/svg">
+	<!-- Define styles and colors -->
+	<defs>
+		<style>
+			.timeline-text { font-family: Arial, sans-serif; font-size: 11px; fill: #e5e7eb; }
+			.year-text { font-family: Arial, sans-serif; font-size: 10px; fill: #9ca3af; }
+			.legend-text { font-family: Arial, sans-serif; font-size: 9px; fill: #e5e7eb; }
+			.grid-line { stroke: #4b5563; stroke-width: 1; }
+			.title-text { font-family: Arial, sans-serif; font-size: 16px; fill: #f3f4f6; font-weight: bold; }
+
+			/* Color classes for different technology categories - darker theme */
+			.frontend { fill: #ef4444; }      /* Brighter red for dark theme */
+			.backend { fill: #3b82f6; }       /* Brighter blue for dark theme */
+			.mobile { fill: #22c55e; }        /* Brighter green for dark theme */
+			.cloud { fill: #f59e0b; }         /* Brighter orange for dark theme */
+			.database { fill: #a855f7; }      /* Brighter purple for dark theme */
+		</style>
+	</defs>
+
+	<!-- Chart background -->
+	<rect width="900" height="520" fill="#111827"/>
+
+	<!-- Title -->
+	<text x="450" y="25" text-anchor="middle" class="title-text">Technology Stack Timeline - Alexey Komov</text>
+
+	<!-- Grid lines (vertical year markers) -->
+	<g class="grid">
+		<line x1="150" y1="55" x2="150" y2="360" class="grid-line"/>
+		<line x1="188" y1="55" x2="188" y2="360" class="grid-line"/>
+		<line x1="226" y1="55" x2="226" y2="360" class="grid-line"/>
+		<line x1="264" y1="55" x2="264" y2="360" class="grid-line"/>
+		<line x1="302" y1="55" x2="302" y2="360" class="grid-line"/>
+		<line x1="340" y1="55" x2="340" y2="360" class="grid-line"/>
+		<line x1="378" y1="55" x2="378" y2="360" class="grid-line"/>
+		<line x1="416" y1="55" x2="416" y2="360" class="grid-line"/>
+		<line x1="454" y1="55" x2="454" y2="360" class="grid-line"/>
+		<line x1="492" y1="55" x2="492" y2="360" class="grid-line"/>
+		<line x1="530" y1="55" x2="530" y2="360" class="grid-line"/>
+		<line x1="568" y1="55" x2="568" y2="360" class="grid-line"/>
+		<line x1="606" y1="55" x2="606" y2="360" class="grid-line"/>
+		<line x1="644" y1="55" x2="644" y2="360" class="grid-line"/>
+		<line x1="682" y1="55" x2="682" y2="360" class="grid-line"/>
+		<line x1="720" y1="55" x2="720" y2="360" class="grid-line"/>
+		<line x1="758" y1="55" x2="758" y2="360" class="grid-line"/>
+		<line x1="796" y1="55" x2="796" y2="360" class="grid-line"/>
+		<line x1="834" y1="55" x2="834" y2="360" class="grid-line"/>
+	</g>
+
+	<!-- Year labels -->
+	<g class="year-labels">
+		<text x="150" y="375" text-anchor="middle" class="year-text">2007</text>
+		<text x="188" y="375" text-anchor="middle" class="year-text">2008</text>
+		<text x="226" y="375" text-anchor="middle" class="year-text">2009</text>
+		<text x="264" y="375" text-anchor="middle" class="year-text">2010</text>
+		<text x="302" y="375" text-anchor="middle" class="year-text">2011</text>
+		<text x="340" y="375" text-anchor="middle" class="year-text">2012</text>
+		<text x="378" y="375" text-anchor="middle" class="year-text">2013</text>
+		<text x="416" y="375" text-anchor="middle" class="year-text">2014</text>
+		<text x="454" y="375" text-anchor="middle" class="year-text">2015</text>
+		<text x="492" y="375" text-anchor="middle" class="year-text">2016</text>
+		<text x="530" y="375" text-anchor="middle" class="year-text">2017</text>
+		<text x="568" y="375" text-anchor="middle" class="year-text">2018</text>
+		<text x="606" y="375" text-anchor="middle" class="year-text">2019</text>
+		<text x="644" y="375" text-anchor="middle" class="year-text">2020</text>
+		<text x="682" y="375" text-anchor="middle" class="year-text">2021</text>
+		<text x="720" y="375" text-anchor="middle" class="year-text">2022</text>
+		<text x="758" y="375" text-anchor="middle" class="year-text">2023</text>
+		<text x="796" y="375" text-anchor="middle" class="year-text">2024</text>
+		<text x="834" y="375" text-anchor="middle" class="year-text">2025</text>
+	</g>
+
+	<!-- Technology timeline rows -->
+	<g class="timeline-rows">
+		<!-- JavaScript - Frontend core (2007-2025) -->
+		<text x="145" y="65" text-anchor="end" class="timeline-text">JavaScript</text>
+		<rect x="150" y="55" width="684" height="12" class="frontend"/>
+
+		<!-- HTML/CSS - Frontend basics (2007-2025) -->
+		<text x="145" y="82" text-anchor="end" class="timeline-text">HTML/CSS</text>
+		<rect x="150" y="72" width="684" height="12" class="frontend"/>
+
+		<!-- PHP - Early backend (2007-2008) -->
+		<text x="145" y="99" text-anchor="end" class="timeline-text">PHP</text>
+		<rect x="150" y="89" width="38" height="12" class="backend"/>
+
+		<!-- MySQL - Early database (2007-2008) -->
+		<text x="145" y="116" text-anchor="end" class="timeline-text">MySQL</text>
+		<rect x="150" y="106" width="38" height="12" class="database"/>
+
+		<!-- Java - Backend (2011-2016) -->
+		<text x="145" y="133" text-anchor="end" class="timeline-text">Java</text>
+		<rect x="340" y="123" width="152" height="12" class="backend"/>
+
+		<!-- Scala - Backend (2013-2016) -->
+		<text x="145" y="150" text-anchor="end" class="timeline-text">Scala</text>
+		<rect x="340" y="140" width="152" height="12" class="backend"/>
+
+		<!-- Bootstrap - Frontend (2013-2016) -->
+		<text x="145" y="167" text-anchor="end" class="timeline-text">Bootstrap</text>
+		<rect x="378" y="157" width="114" height="12" class="frontend"/>
+
+		<!-- Node.js - Backend (2016-2025) -->
+		<text x="145" y="184" text-anchor="end" class="timeline-text">Node.js</text>
+		<rect x="492" y="174" width="76" height="12" class="backend"/>
+		<rect x="644" y="174" width="76" height="12" class="backend"/>
+
+		<!-- React - Frontend (2016-2025) -->
+		<text x="145" y="201" text-anchor="end" class="timeline-text">React</text>
+		<rect x="492" y="191" width="342" height="12" class="frontend"/>
+
+		<!-- Redux - Frontend (2016-2025) -->
+		<text x="145" y="218" text-anchor="end" class="timeline-text">Redux</text>
+		<rect x="492" y="208" width="342" height="12" class="frontend"/>
+
+		<!-- TypeScript - Frontend/Backend (2018-2025) -->
+		<text x="145" y="235" text-anchor="end" class="timeline-text">TypeScript</text>
+		<rect x="568" y="225" width="266" height="12" class="frontend"/>
+
+		<!-- Swift - Mobile (2018-2020) -->
+		<text x="145" y="252" text-anchor="end" class="timeline-text">Swift</text>
+		<rect x="568" y="242" width="76" height="12" class="mobile"/>
+
+		<!-- Objective-C - Mobile (2018-2025) -->
+		<text x="145" y="269" text-anchor="end" class="timeline-text">Objective-C</text>
+		<rect x="568" y="259" width="266" height="12" class="mobile"/>
+
+		<!-- React Native - Mobile (2018-2025) -->
+		<text x="145" y="286" text-anchor="end" class="timeline-text">React Native</text>
+		<rect x="568" y="276" width="76" height="12" class="mobile"/>
+		<rect x="720" y="276" width="114" height="12" class="mobile"/>
+
+		<!-- AWS Services - Cloud (2020-2022) -->
+		<text x="145" y="303" text-anchor="end" class="timeline-text">AWS</text>
+		<rect x="644" y="293" width="76" height="12" class="cloud"/>
+
+		<!-- DynamoDB - Database (2020-2022) -->
+		<text x="145" y="320" text-anchor="end" class="timeline-text">DynamoDB</text>
+		<rect x="644" y="310" width="76" height="12" class="database"/>
+
+		<!-- MongoDB - Database (2013-2017) -->
+		<text x="145" y="337" text-anchor="end" class="timeline-text">MongoDB</text>
+		<rect x="378" y="327" width="152" height="12" class="database"/>
+
+		<!-- Google Closure - Frontend (2007-2008, 2012-2020, 2024-2025) -->
+		<text x="145" y="354" text-anchor="end" class="timeline-text">Google Closure</text>
+		<rect x="150" y="344" width="38" height="12" class="frontend"/>
+		<rect x="340" y="344" width="304" height="12" class="frontend"/>
+		<rect x="796" y="344" width="38" height="12" class="frontend"/>
+	</g>
+
+	<!-- Project/Career markers (white lines for dark theme) -->
+	<g class="career-markers">
+		<!-- Scand period end (2008) -->
+		<rect x="188" y="55" width="2" height="322" fill="#f3f4f6"/>
+		<!-- EPAM start (2011) -->
+		<rect x="302" y="55" width="2" height="322" fill="#f3f4f6"/>
+		<!-- Liberty Global start (2016) -->
+		<rect x="492" y="55" width="2" height="322" fill="#f3f4f6"/>
+		<!-- Ticketmaster start (2018) -->
+		<rect x="568" y="55" width="2" height="322" fill="#f3f4f6"/>
+		<!-- Cox start (2020) -->
+		<rect x="644" y="55" width="2" height="322" fill="#f3f4f6"/>
+		<!-- ADNOC start (2022) -->
+		<rect x="720" y="55" width="2" height="322" fill="#f3f4f6"/>
+	</g>
+
+	<!-- Legend -->
+	<g class="legend">
+		<!-- Legend background -->
+		<rect x="150" y="380" width="650" height="65" fill="#1f2937" stroke="#4b5563" stroke-width="1"/>
+
+		<!-- Legend title -->
+		<text x="160" y="395" class="legend-text" font-weight="bold">Technology Categories:</text>
+
+		<!-- Frontend legend -->
+		<rect x="160" y="405" width="12" height="8" class="frontend"/>
+		<text x="178" y="413" class="legend-text">Frontend</text>
+
+		<!-- Backend legend -->
+		<rect x="160" y="420" width="12" height="8" class="backend"/>
+		<text x="178" y="428" class="legend-text">Backend</text>
+
+		<!-- Mobile legend -->
+		<rect x="400" y="405" width="12" height="8" class="mobile"/>
+		<text x="418" y="413" class="legend-text">Mobile</text>
+
+		<!-- Cloud legend -->
+		<rect x="400" y="420" width="12" height="8" class="cloud"/>
+		<text x="418" y="428" class="legend-text">Cloud/DevOps</text>
+
+		<!-- Database legend -->
+		<rect x="600" y="405" width="12" height="8" class="database"/>
+		<text x="618" y="413" class="legend-text">Database</text>
+
+		<!-- Career markers legend -->
+		<rect x="600" y="420" width="2" height="8" fill="#f3f4f6"/>
+		<text x="608" y="428" class="legend-text">Career transitions</text>
+	</g>
+
+	<!-- Career phases labels -->
+	<g class="career-labels">
+		<text x="169" y="45" text-anchor="middle" class="year-text">Scand</text>
+		<text x="330" y="45" text-anchor="middle" class="year-text">Early EPAM</text>
+		<text x="525" y="45" text-anchor="middle" class="year-text">Liberty Global</text>
+		<text x="595" y="45" text-anchor="middle" class="year-text">Ticketmaster</text>
+		<text x="663" y="45" text-anchor="middle" class="year-text">Cox Auto</text>
+		<text x="740" y="45" text-anchor="middle" class="year-text">ADNOC</text>
+	</g>
+</svg>
