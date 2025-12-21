@@ -296,6 +296,6 @@ Turns out, the look of function will be different for each end velocity. Let us 
 
 So you see the relation here — the less end velocity will differ from start velocity, the more flat cubic bezier function will be, up to the limit of simple line (cubic-bezier(.33,.33,.66,.66) or linear). The maximal difference between start and end velocity is when end velocity is zero. In this case function will be cubic-bezier(0.33, 0.66, 0.66, 1). And in any case in between, the function will look like cubic-bezier(0.33, 0.66-x, 0.66, 1-x) where x = abs(endVelocity/startVelocity).
 
-So we're finally here! The demo of working implementation could be seen [http://alexeykomov.me/momentum-scroller-demo](http://alexeykomov.me/momentum-scroller-demo)(should be visited from iOS device or you can simulate it with dev tools).
+So we're finally here! The demo of working implementation could be seen [here](http://alexeykomov.github.io/momentum-scroller-demo)(should be visited from iOS device or you can simulate it with dev tools).
 
 Thank you for your attention.
